@@ -29,6 +29,7 @@ sysinfo.txt
 .DS_Store
 
 VS/
+*.meta
 
 ###
 # OS generated
