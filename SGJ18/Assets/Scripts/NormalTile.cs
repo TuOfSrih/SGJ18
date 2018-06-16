@@ -8,8 +8,14 @@ using UnityEditor;
 
 public class NormalTile : Tile {
 
-	public Texture normalMap;
+	public Sprite heightMap;
 
+	public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData) {
+		base.GetTileData(position, tilemap, ref tileData);
+		if (position.z == 5) {
+			tileData.sprite = heightMap;
+		}
+	}
 
 #if UNITY_EDITOR
 	// The following is a helper that adds a menu item to create a RoadTile Asset

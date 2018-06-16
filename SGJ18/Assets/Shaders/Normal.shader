@@ -44,13 +44,13 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
-				fixed4 col = tex2D(_Normals, i.uv);
+				fixed3 col = UnpackNormal(tex2D(_Normals, i.uv)) / 2 + 0.5;
 				//col = (col - 0.5) * 2;
 				//col.z = atan2(col.y, col.x);
 				
 				// apply fog
 				//UNITY_APPLY_FOG(i.fogCoord, col);
-				return col;
+				return fixed4(col, 1);
 			}
 			ENDCG
 		}
