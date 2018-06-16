@@ -44,4 +44,6 @@ public class WorldNode : MonoBehaviour, IHeapItem<WorldNode> {
         }
         return -compare;
     }
+
+
 }
