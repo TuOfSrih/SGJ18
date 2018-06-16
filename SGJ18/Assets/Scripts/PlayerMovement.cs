@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -11,22 +12,33 @@ public class PlayerMovement : MonoBehaviour {
 	private Collider2D collider;
 
 	private bool nearCloset;
+	private bool nearDiary;
+	private bool isReading;
+	
+	
 
 	public bool isHidden;
+	public bool diaryIsRead;
 
 	private GameObject closet;
+
+	public DialogueTrigger diary;
+	public DialogueManager dialogue;
 
 	void Start () {
 		rigidbody = GetComponent<Rigidbody2D>();
 		collider = GetComponent<Collider2D>();
+		diaryIsRead = false;
 		nearCloset = false;
+		nearDiary = false;
 		isHidden = false;
 	}
 	
 	void Update () {
 		Vector2 target = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * movementSpeed;
 		rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, target, acceleration * Time.deltaTime);
-
+		transform.up = (Vector2)UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+		
 		if (nearCloset)
 		{
 			if (Input.GetKeyDown(KeyCode.Space))
@@ -34,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
 				if (isHidden)
 				{
 					isHidden = false; 
-					transform.position = closet.transform.position + Vector3.down * 5;
+					transform.position = closet.transform.position + Vector3.down * 4.5f;
 					rigidbody.simulated = true;
 				}
 				else
@@ -46,10 +58,34 @@ public class PlayerMovement : MonoBehaviour {
 				
 			}
 		}
+		
+		if (nearDiary)
+		{
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+				if (isReading)
+				{
+					dialogue.DisplayNextSentence();
+					isReading = false;
+				}
+				else
+				{
+					diary.TriggerDialogue();
+					diaryIsRead = true;
+					isReading = true;
+				}
+			}
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
+		if (coll.CompareTag("diary"))
+		{
+			nearDiary = true;
+		}
+		
+		
 		if (!coll.CompareTag("closet")) return;
 		nearCloset = true;
 		closet = coll.gameObject;
@@ -57,8 +93,17 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if (!rigidbody.simulated || coll.CompareTag("closet")) return;
-		nearCloset = false;
-		closet = null;
+		Debug.Log("first");
+		if (coll.CompareTag("diary"))
+		{
+			nearDiary = false;
+		}
+
+		if (rigidbody.simulated && coll.CompareTag("closet"))
+		{
+			Debug.Log("second");
+			nearCloset = false;
+			closet = null;
+		}
 	}
 }
