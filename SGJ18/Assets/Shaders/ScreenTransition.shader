@@ -2,9 +2,9 @@
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		_MainTex("Texture", 2D) = "red" {}
 		_Displacement("Displacement", 2D) = "black" {}
-		_Magnitude("Magnitude", Range(0,0.2)) = 1
+		_Magnitude("Magnitude", Range(0,0.5)) = 1
 	}
 	SubShader
 	{
@@ -45,11 +45,9 @@
 
 			fixed4 frag (v2f i) : SV_Target
 			{
-				float2 disp = tex2D(_Displacement, i.uv);
+				float2 disp = tex2D(_Displacement, i.uv + _Time.x);
 				disp = (disp * 2 - 1 ) * _Magnitude;
 				fixed4 col = tex2D(_MainTex, i.uv + disp);
-				// just invert the colors
-				col.rgb = 1 - col.rgb;
 				return col;
 			}
 			ENDCG

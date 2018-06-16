@@ -780,6 +780,9 @@ MonoBehaviour:
   coneAngle: 22
   rayStartOffset: 1
   raysPerDeg: 2
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1766357561
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,7 +935,17 @@ Prefab:
     - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
         type: 2}
       propertyPath: ambient
-      value: 0.95
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: Magnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: fadeTime
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}

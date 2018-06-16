@@ -9,10 +9,11 @@ public class RenderSystem : MonoBehaviour {
     public Camera normalCam;
     public Shader combine;
     public Material Transitionmaterial;
-    [Range(0, 0.2f)]
+    [Range(0, 0.5f)]
     public float Magnitude;
     [Range(0, 1)]
     public float ambient;
+    public float fadeTime;
 
 
 	RenderTexture lightTexture;
@@ -24,6 +25,8 @@ public class RenderSystem : MonoBehaviour {
 		//normalTexture = new RenderTexture(Screen.width, Screen.height, 0);
 		clearMat = new Material(Shader.Find("Unlit/Color"));
 		clearMat.SetColor("_Color", Color.black);
+
+        triggerTransition();
 	}
 
 	private void OnRenderImage(RenderTexture source, RenderTexture destination) {
@@ -65,12 +68,13 @@ public class RenderSystem : MonoBehaviour {
         combineMat.SetTexture("_Normals", normalTexture);
         combineMat.SetFloat("_Ambient", ambient);
 
-        
-        Graphics.Blit(source, destination, combineMat);
+        RenderTexture fY = RenderTexture.GetTemporary(albedo.width, albedo.height);
+        Graphics.Blit(source, fY, combineMat);
 
         Transitionmaterial.SetFloat("_Magnitude", Magnitude);
-        //Graphics.Blit(destination, destination, Transitionmaterial);
-        
+        //Transitionmaterial.SetTexture("_MainTex", albedo);
+        Graphics.Blit(fY, destination, Transitionmaterial);
+        RenderTexture.ReleaseTemporary(fY);
 
 		//DEBUGGING STUFF REMOVE THIS!!!
 		if (Input.GetKey(KeyCode.Y)) {
@@ -78,6 +82,24 @@ public class RenderSystem : MonoBehaviour {
 		}
 	}
 
+    public void triggerTransition() {
+        StartCoroutine(transition());
+    }
+    private IEnumerator transition() {
+        while(Magnitude <= 0.5) {
+            Magnitude += Time.deltaTime * 0.5f / fadeTime;
+            yield return null;
+        }
+        //Switch Map here
+
+        while(Magnitude > 0) {
+            Magnitude -= Time.deltaTime * 0.5f / fadeTime;
+            yield return null;
+        }
+        Magnitude = 0;
+        
+        
+    }
 
 	// Update is called once per frame
 	void Update () {
