@@ -11,8 +11,12 @@ enum EnemyState
 
 public class EnemyBehaviour : MonoBehaviour {
     private IEnumerator activeCoroutine;
-    private Pathfinding pathfinding;
     private EnemyState state;
+
+    private Pathfinding pathfinding;
+    public PlayerMovement playerMovement;
+
+    public int enemyViewDist = 50;
 
 	// Use this for initialization
 	void Start () {
@@ -29,37 +33,55 @@ public class EnemyBehaviour : MonoBehaviour {
             // Check distance and change State to
             // Trailing if player is in Range
             
-            // TODO
+            if(pathfinding.TileDistToPLayer < enemyViewDist)
+            {
+                StateTransition(pathfinding.TrailPlayer(), EnemyState.Trailing);
+            }
         }
         else if(state == EnemyState.Trailing)
         {
             // Check distance and change state to
             // Searching if player is out of range
 
-            // TODO
+            if(pathfinding.TileDistToPLayer > enemyViewDist)
+            {
+                StateTransition(pathfinding.SearchPlayer(), EnemyState.Searching);
+            }
 
             // Check if the player is hidden and change state to
             // Abandoning if so
 
-            // TODO
+            if (playerMovement.isHidden || Input.GetKey(KeyCode.LeftControl))
+            {
+                StateTransition(pathfinding.AbandonPlayer(), EnemyState.Abandoning);
+            }
         }
         else
         {
             // Check if the player suddenly is in range and visible
             // again and in this case change state to Trailing
 
-            // TODO
+            if(pathfinding.TileDistToPLayer < enemyViewDist && !playerMovement.isHidden || Input.GetKey(KeyCode.LeftControl))
+            {
+                StateTransition(pathfinding.TrailPlayer(), EnemyState.Trailing);
+            }
 
             // Check if the enemy has been abandoning long enough and the
             // player didnt reappear
 
             if(pathfinding.TileDistToPLayer > 69)
             {
-                state = EnemyState.Searching;
-                StopCoroutine(activeCoroutine);
-                activeCoroutine = pathfinding.SearchPlayer();
-                StartCoroutine(activeCoroutine);
+                StateTransition(pathfinding.SearchPlayer(), EnemyState.Searching);
             }
         }
 	}
+
+    private void StateTransition(IEnumerator newCoroutine, EnemyState newState)
+    {
+        // Maybe stopping the inner coroutine is also mandatory
+        state = newState;
+        StopCoroutine(activeCoroutine);
+        activeCoroutine = newCoroutine;
+        StartCoroutine(activeCoroutine);
+    }
 }

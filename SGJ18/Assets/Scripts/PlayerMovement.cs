@@ -113,7 +113,8 @@ public class PlayerMovement : MonoBehaviour {
 				//facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) -
 				//(Vector2) transform.position;
 				accel = j.GetAccel();
-				facing = new Vector2(accel.x, -accel.y) * 2;
+				facingLerp = facing;
+				facing = Vector2.Lerp(facingLerp, new Vector2(accel.x, -accel.y), 0.1f);
 
 				//facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transform.position;
 				//Debug.DrawLine(facing, transform.position, Color.green);
@@ -126,7 +127,7 @@ public class PlayerMovement : MonoBehaviour {
 				//facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) -
 				//(Vector2) transform.position;
 				facingLerp = facing;
-				facing = Vector2.Lerp(facingLerp, new Vector2(-accel.x, accel.y) * 20000, 0.1f);
+				facing = Vector2.Lerp(facingLerp, new Vector2(-accel.x, accel.y), 0.1f);
 				//facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3;
 				//Debug.DrawLine(facing, transform.position, Color.green);
 			}
