@@ -34,7 +34,7 @@ public class RenderSystem : MonoBehaviour {
 		Graphics.Blit(lightTexture, lightTexture, clearMat, 0);
 
 		//Set material to light render material
-		Material mat = new Material(Shader.Find("Standard")); //TODO
+		Material mat = new Material(Shader.Find("Unlit/Color")); //TODO
 		mat.SetPass(0);
 
 		//Render Lights
