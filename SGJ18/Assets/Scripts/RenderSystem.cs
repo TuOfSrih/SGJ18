@@ -8,6 +8,7 @@ public class RenderSystem : MonoBehaviour {
     public RenderTexture normalTexture;
     public Camera normalCam;
     public Shader combine;
+    public Material ambientMat;
     public Material Transitionmaterial;
     [Range(0, 0.5f)]
     public float Magnitude;
@@ -33,10 +34,10 @@ public class RenderSystem : MonoBehaviour {
         RenderTexture albedo = source;
 
 
-		if (normalCam != null) {
+		/*if (normalCam != null) {
             normalCam.SetReplacementShader(replacement, "");
 			normalCam.Render();
-		}
+		}*/
 
         /*int width = lightTexture.width >> DownRes;
         int height = lightTexture.height >> DownRes;
@@ -68,13 +69,21 @@ public class RenderSystem : MonoBehaviour {
         combineMat.SetTexture("_Normals", normalTexture);
         combineMat.SetFloat("_Ambient", ambient);
 
+
+        //Combine Lights
         RenderTexture fY = RenderTexture.GetTemporary(albedo.width, albedo.height);
         Graphics.Blit(source, fY, combineMat);
+
+        //Add ambient
+        RenderTexture ambientTex = RenderTexture.GetTemporary(albedo.width, albedo.height);
+        ambientMat.SetTexture("_Albedo", albedo);
+        Graphics.Blit(fY, ambientTex, ambientMat);
 
         Transitionmaterial.SetFloat("_Magnitude", Magnitude);
         //Transitionmaterial.SetTexture("_MainTex", albedo);
         Graphics.Blit(fY, destination, Transitionmaterial);
         RenderTexture.ReleaseTemporary(fY);
+        RenderTexture.ReleaseTemporary(ambientTex);
 
 		//DEBUGGING STUFF REMOVE THIS!!!
 		if (Input.GetKey(KeyCode.Y)) {

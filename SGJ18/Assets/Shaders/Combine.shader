@@ -51,11 +51,8 @@
 			{
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
-				fixed4 normals = tex2D(_Normals, i.uv);
 				fixed4 lighting = tex2D(_LightingTex, i.uv);
-				normals = normals * 2 - 1;
-				float intensity = dot(normals.xyz, normalize(float3(lighting.xy, 1) * 2 - 1));
-				intensity *= lighting.z;
+				float intensity = lighting.z;
 				return col * intensity * _Ambient + col * (1 -_Ambient);
 			}
 

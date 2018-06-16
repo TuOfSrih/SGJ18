@@ -3,7 +3,6 @@
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
-		_Normals("Normals", 2D) = "bump" {}
 	}
 	SubShader
 	{

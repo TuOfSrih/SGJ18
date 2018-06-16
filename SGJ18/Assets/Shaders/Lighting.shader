@@ -1,4 +1,4 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿
 
 Shader "Lighting"
 {
@@ -7,19 +7,21 @@ Shader "Lighting"
 		_MainTex ("Texture", 2D) = "white" {}
 		_LightingPos("LightingPos", Vector) = (0,0,0,0)
 		_MaxLength("MaxLength", Float) = 0
+		_Color("Color", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
 		LOD 100
+		
 
 		Pass
 		{
+			Blend One One
+
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			// make fog work
-			//#pragma multi_compile_fog
 			
 			#include "UnityCG.cginc"
 
@@ -44,6 +46,7 @@ Shader "Lighting"
 			float4 _LightingPos;
 			float _MaxLength;
 			float4 _MainTex_TexelSize;
+			float4 _Color;
 
 			v2f vert(appdata v) {
 				v2f o;
@@ -64,12 +67,11 @@ Shader "Lighting"
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
-				fixed4 col = normalize(i.pos - _LightingPos) / 2 + .5;
+				//fixed4 col = //normalize(i.pos - _LightingPos) / 2 + .5;
 				float distance = length(i.pos.xy - _LightingPos.xy);
-				col.b =  1 - distance / _MaxLength;
-				//return _LightingPos;
-				//return float4(1, 0, 0, 1);
-				return col;
+				//col.b =  1 - distance / _MaxLength;
+
+				return tex2D(_MainTex, i.uv) * distance * _Color;
 			}
 			ENDCG
 		}
