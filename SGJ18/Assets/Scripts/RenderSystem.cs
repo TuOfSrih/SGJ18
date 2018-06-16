@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RenderSystem : MonoBehaviour {
 
-    public Shader replacement;
     public RenderTexture normalTexture;
     public Camera normalCam;
     public Shader combine;
