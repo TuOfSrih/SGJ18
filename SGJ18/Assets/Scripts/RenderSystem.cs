@@ -10,6 +10,7 @@ public class RenderSystem : MonoBehaviour {
     public Shader combine;
     public Material ambientMat;
     public Material Transitionmaterial;
+    public Material BlurMaterial;
     [Range(0, 0.5f)]
     public float Magnitude;
     [Range(0, 1)]
@@ -33,23 +34,6 @@ public class RenderSystem : MonoBehaviour {
 	private void OnRenderImage(RenderTexture source, RenderTexture destination) {
         RenderTexture albedo = source;
 
-
-		/*if (normalCam != null) {
-            normalCam.SetReplacementShader(replacement, "");
-			normalCam.Render();
-		}*/
-
-        /*int width = lightTexture.width >> DownRes;
-        int height = lightTexture.height >> DownRes;
-        RenderTexture rt = RenderTexture.GetTemporary(width, height);
-        Graphics.Blit(source, rt);
-        for( int i= 0; i < iterations; i++) {
-            RenderTexture rt2 = RenderTexture.GetTemporary(width, height);
-            Graphics.Blit(rt, rt2, Blurmaterial);
-            RenderTexture.ReleaseTemporary(rt);
-        }
-        Graphics.Blit(rt, lightTexture);
-        RenderTexture.ReleaseTemporary(rt);*/
 
 		Graphics.SetRenderTarget(lightTexture);
 		//Clear Current texture
@@ -75,17 +59,22 @@ public class RenderSystem : MonoBehaviour {
         RenderTexture fY = RenderTexture.GetTemporary(albedo.width, albedo.height);
         Graphics.Blit(source, fY, combineMat);
 
+        //Blur
+        RenderTexture next = RenderTexture.GetTemporary(albedo.width, albedo.height);
+        Graphics.Blit(fY, next, BlurMaterial);
+
         //Add ambient
         RenderTexture ambientTex = RenderTexture.GetTemporary(albedo.width, albedo.height);
         ambientMat.SetTexture("_Albedo", albedo);
         ambientMat.SetFloat("_Ambient", ambient);
-        Graphics.Blit(fY, ambientTex, ambientMat);
+        Graphics.Blit(next, ambientTex, ambientMat);
 
         Transitionmaterial.SetFloat("_Magnitude", Magnitude);
         //Transitionmaterial.SetTexture("_MainTex", albedo);
         Graphics.Blit(ambientTex, destination, Transitionmaterial);
         RenderTexture.ReleaseTemporary(fY);
         RenderTexture.ReleaseTemporary(ambientTex);
+        RenderTexture.ReleaseTemporary(next);
 
 		//DEBUGGING STUFF REMOVE THIS!!!
 		if (Input.GetKey(KeyCode.Y)) {
