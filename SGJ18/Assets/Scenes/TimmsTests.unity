@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 232943484}
   - component: {fileID: 232943483}
   - component: {fileID: 232943487}
+  - component: {fileID: 232943488}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -209,6 +210,19 @@ MonoBehaviour:
   player: {fileID: 1577765609}
   offset: {x: 0, y: 0, z: -3}
   speed: 30
+--- !u!114 &232943488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 232943482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a7af60e0b6a8449a3c0614c155b51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalCam: {fileID: 0}
+  clearTexture: {fileID: 2800000, guid: a2299c60e21595644a0b7fdd3e111a35, type: 3}
 --- !u!1 &340738537
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,96 +321,7 @@ Transform:
   m_LocalScale: {x: 0.37486157, y: 0.29260647, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &480082007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 480082011}
-  - component: {fileID: 480082010}
-  - component: {fileID: 480082009}
-  - component: {fileID: 480082008}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &480082008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480082007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a7af60e0b6a8449a3c0614c155b51f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalCam: {fileID: 0}
-  coneAngle: 22
-  length: 7
-  rayStartOffset: 0.78
-  raysPerDeg: 4
---- !u!23 &480082009
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480082007}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &480082010
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480082007}
-  m_Mesh: {fileID: 0}
---- !u!4 &480082011
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480082007}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &559611319
 GameObject:
@@ -496,7 +421,7 @@ Transform:
   m_LocalScale: {x: 0.08422703, y: 0.09519432, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518740180
 GameObject:
@@ -596,7 +521,7 @@ Transform:
   m_LocalScale: {x: 0.37486157, y: 0.29260647, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577765609
 GameObject:
@@ -610,6 +535,7 @@ GameObject:
   - component: {fileID: 1577765612}
   - component: {fileID: 1577765611}
   - component: {fileID: 1577765610}
+  - component: {fileID: 1577765615}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -635,6 +561,7 @@ MonoBehaviour:
   diary: {fileID: 0}
   dialogue: {fileID: 0}
   facing: {x: 0, y: 0}
+  rayLight: {fileID: 1577765615}
 --- !u!61 &1577765611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -738,3 +665,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1577765615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577765609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fdae9f1a86c6140be138b8e8b32734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+  facing: {x: 0, y: 0, z: 0}
+  coneAngle: 22
+  length: 5
+  rayStartOffset: 1
+  raysPerDeg: 2
