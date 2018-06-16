@@ -5,10 +5,28 @@ using UnityEngine;
 public class Pathfinding : MonoBehaviour {
     public CreateNodesFromTilemap map;
 
+    private Stack<WorldNode> path;
+
+    private WorldNode nextNode;
+
+    public WorldNode currentTile;
+
+    public GameObject player;
+
+    public float speed = 5;
+
+    // TODO delete when unnecessary!!
+    public int endX;
+    public int endY;
+
+    IEnumerator trail = null;
 
 	// Use this for initialization
 	void Start () {
-		
+        path = new Stack<WorldNode>();
+        currentTile = map.GetNodeAt(transform.position);
+        Debug.Log("[" + currentTile.gridX + "," + currentTile.gridY + "]");
+        StartCoroutine(TrailPlayer());
 	}
 	
 	// Update is called once per frame
@@ -16,20 +34,72 @@ public class Pathfinding : MonoBehaviour {
 		
 	}
 
-    List<WorldNode> FindPath(WorldNode start, WorldNode end)
+    IEnumerator TrailPlayer()
     {
-        BinaryHeap<WorldNode> openSet = new BinaryHeap<WorldNode>(map.gridBoundX * map.gridBoundY);
+        while (true)
+        {
+            WorldNode playerTile = map.GetNodeAt(player.transform.position);
+            if(trail != null)
+                StopCoroutine(trail);
+            trail = WalkPath(playerTile);
+            StartCoroutine(trail);
+            yield return new WaitForSeconds(0.7f);
+        }
+    }
+
+    IEnumerator WalkPath(WorldNode dst)
+    {
+        //Debug.Log("Started Walking.");
+        FindPath(currentTile, dst);
+        //Debug.Log("Found Path to [" + dst.gridX + "," + dst.gridY + "]");
+        //StartCoroutine(FindPath(currentTile, dst));
+        while(true)
+        {
+            if(transform.position == currentTile.transform.position)
+            {
+                if(path.Count == 0)
+                {
+                    yield break;
+                }
+                currentTile = path.Pop();
+            }
+            transform.position = Vector3.MoveTowards(transform.position, currentTile.transform.position, speed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    
+
+    void FindPath(WorldNode start, WorldNode end)
+    {
+        Debug.Log("Started Path finding " + end.walkable);
+        bool pathSuccess = false;
+
+        //BinaryHeap<WorldNode> openSet = new BinaryHeap<WorldNode>(map.gridBoundX * map.gridBoundY);
+        List<WorldNode> openSet = new List<WorldNode>();
         HashSet<WorldNode> closeSet = new HashSet<WorldNode>();
         openSet.Add(start);
+        Debug.Log(openSet.Count);
         while(openSet.Count > 0)
         {
-            WorldNode currentNode = openSet.RemoveFirst();
+            //WorldNode currentNode = openSet.RemoveFirst();
+            WorldNode currentNode = openSet[0];
+            for(int i = 0; i < openSet.Count; i++)
+            {
+                if(openSet[i].Cost < currentNode.Cost || openSet[i].Cost == currentNode.Cost && openSet[i].hCost < currentNode.hCost)
+                {
+                    currentNode = openSet[i];
+                }
+            }
             
+            
+            openSet.Remove(currentNode);
             closeSet.Add(currentNode);
 
             if(currentNode == end)
             {
-                return RetracePath(start, end);
+                pathSuccess = true;
+                break;
             }
 
             foreach(WorldNode n in currentNode.neighbors)
@@ -46,28 +116,29 @@ public class Pathfinding : MonoBehaviour {
                         if (!openSet.Contains(n))
                         {
                             openSet.Add(n);
-                            openSet.UpdateItem(n);
+                            //openSet.UpdateItem(n);
                         }
                     }
                 }
             }
+            //yield return new WaitForSeconds(1.2f);
         }
-        return new List<WorldNode>();
+        if (pathSuccess)
+        {
+            RetracePath(start, end);
+        }
     }
 
-    List<WorldNode> RetracePath(WorldNode start, WorldNode end)
+    void RetracePath(WorldNode start, WorldNode end)
     {
-        List<WorldNode> path = new List<WorldNode>();
+        path = new Stack<WorldNode>();
         WorldNode currentNode = end;
 
         while(currentNode != start)
         {
-            path.Add(currentNode);
+            path.Push(currentNode);
             currentNode = currentNode.parent;
         }
-
-        path.Reverse();
-        return path;
     }
     
     int GetDistance(WorldNode a, WorldNode b)
