@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+	public static PlayerMovement instance;
+
 	public float movementSpeed;
 	public float acceleration;
 
@@ -26,6 +28,7 @@ public class PlayerMovement : MonoBehaviour {
 	public DialogueManager dialogue;
 
 	void Start () {
+		instance = this;
 		rigidbody = GetComponent<Rigidbody2D>();
 		collider = GetComponent<Collider2D>();
 		diaryIsRead = false;
