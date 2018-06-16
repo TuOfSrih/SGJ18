@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour {
 	[HideInInspector]
 	public Vector2 facing;
 
+	public RayLight2D rayLight;
+
 	void Start () {
 		instance = this;
 		rigidbody = GetComponent<Rigidbody2D>();
@@ -44,7 +46,12 @@ public class PlayerMovement : MonoBehaviour {
 		Vector2 target = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * movementSpeed;
 		rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, target, acceleration * Time.deltaTime);
 		facing = (Vector2)UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-		
+		if (rayLight != null) {
+			rayLight.position = transform.position;
+			rayLight.facing = facing;
+		}
+
+
 		if (nearCloset)
 		{
 			if (Input.GetKeyDown(KeyCode.Space))
