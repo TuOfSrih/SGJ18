@@ -51,7 +51,7 @@
 				fixed4 normals = tex2D(_Normals, i.uv);
 				fixed4 lighting = tex2D(_LightingTex, i.uv);
 				normals = normals * 2 - 1;
-				float intensity = dot(- normals.xyz, normalize(lighting.xy + float3(0,0,-1)));
+				float intensity = dot(normals.xyz, normalize(float3(lighting.xy, 1) * 2 - 1));
 				intensity *= lighting.z;
 				return col * intensity;
 			}

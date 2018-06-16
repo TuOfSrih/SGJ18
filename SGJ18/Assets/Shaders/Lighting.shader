@@ -56,7 +56,7 @@ Shader "Lighting"
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
-				fixed4 col = normalize(i.pos - _LightingPos);
+				fixed4 col = normalize(i.pos - _LightingPos) / 2 + .5;
 				float distance = length(i.pos.xy - _LightingPos.xy);
 				col.b =  1 - distance / _MaxLength;
 				//return _LightingPos;
