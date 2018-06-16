@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: e0d7069e966a11142977f9e4af26dc5c
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
+=======
+guid: 5094a81c403adae4bafeb95dbfe628a5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 
