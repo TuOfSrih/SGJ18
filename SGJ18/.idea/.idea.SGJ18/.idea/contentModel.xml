@@ -5,13 +5,38 @@
     <e p="C:\Users\KuroiX\Documents\SGJ18\SGJ18\SGJ18" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="JoyconDemo.cs" t="Include" />
+        <e p="JoyconLib_scripts" t="Include">
+          <e p="HIDapi.cs" t="Include" />
+          <e p="Joycon.cs" t="Include" />
+          <e p="JoyconManager.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
-          <e p="Camera.cs" t="Include" />
+          <e p="CameraFollow.cs" t="Include" />
+          <e p="CamReplaceShader.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />
+          <e p="Light2D.cs" t="Include" />
+          <e p="NormalTile.cs" t="Include" />
+          <e p="Pathfinding" t="Include">
+            <e p="BinaryHeap.cs" t="Include" />
+            <e p="CreateNodesFromTilemap.cs" t="Include" />
+            <e p="Pathfinding.cs" t="Include" />
+            <e p="WorldNode.cs" t="Include" />
+          </e>
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="RayLight2D.cs" t="Include" />
+          <e p="RenderSystem.cs" t="Include" />
           <e p="Spider.cs" t="Include" />
+          <e p="TilemapCopy.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Albedo.shader" t="Include" />
+          <e p="Combine.shader" t="Include" />
+          <e p="Lighting.shader" t="Include" />
+          <e p="Normal.shader" t="Include" />
+          <e p="ScreenTransition.shader" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
