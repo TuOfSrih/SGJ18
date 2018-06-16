@@ -8,6 +8,8 @@ public class RayLight2D : Light2D {
 	public float rayStartOffset = 1.5f;
 	public int raysPerDeg = 2;
 
+	public LayerMask mask;
+
 	public override void Render(Material mat) {
 		base.Render(mat);
 		//Debug.Log("Rendering");
@@ -21,7 +23,7 @@ public class RayLight2D : Light2D {
 		for (int i = 0; i <= coneAngle * 2 * raysPerDeg; i++) {
 			float ang = angle + ((float)i / raysPerDeg - coneAngle) * Mathf.Deg2Rad;
 			Vector3 cast = new Vector2(Mathf.Cos(ang), Mathf.Sin(ang));
-			RaycastHit2D hit = Physics2D.Raycast(position + rayStartOffset * cast.normalized, cast, maxDistance - rayStartOffset);
+			RaycastHit2D hit = Physics2D.Raycast(position + rayStartOffset * cast.normalized, cast, maxDistance - rayStartOffset, mask);
 			if (hit.collider == null) {
 				vertices[i] = position + cast.normalized * maxDistance;
 			} else {
