@@ -8,9 +8,14 @@ public class RenderSystem : MonoBehaviour {
     public RenderTexture normalTexture;
     public Camera normalCam;
     public Shader combine;
+    public Material Transitionmaterial;
+    [Range(0, 0.2f)]
+    public float Magnitude;
+    [Range(0, 1)]
+    public float ambient;
+
 
 	RenderTexture lightTexture;
-
 
 	Material clearMat;
 
@@ -30,6 +35,18 @@ public class RenderSystem : MonoBehaviour {
 			normalCam.Render();
 		}
 
+        /*int width = lightTexture.width >> DownRes;
+        int height = lightTexture.height >> DownRes;
+        RenderTexture rt = RenderTexture.GetTemporary(width, height);
+        Graphics.Blit(source, rt);
+        for( int i= 0; i < iterations; i++) {
+            RenderTexture rt2 = RenderTexture.GetTemporary(width, height);
+            Graphics.Blit(rt, rt2, Blurmaterial);
+            RenderTexture.ReleaseTemporary(rt);
+        }
+        Graphics.Blit(rt, lightTexture);
+        RenderTexture.ReleaseTemporary(rt);*/
+
 		Graphics.SetRenderTarget(lightTexture);
 		//Clear Current texture
 		Graphics.Blit(lightTexture, lightTexture, clearMat, 0);
@@ -46,8 +63,14 @@ public class RenderSystem : MonoBehaviour {
         combineMat.SetTexture("_MainTex", albedo);
         combineMat.SetTexture("_LightingTex", lightTexture);
         combineMat.SetTexture("_Normals", normalTexture);
+        combineMat.SetFloat("_Ambient", ambient);
 
+        
         Graphics.Blit(source, destination, combineMat);
+
+        Transitionmaterial.SetFloat("_Magnitude", Magnitude);
+        //Graphics.Blit(destination, destination, Transitionmaterial);
+        
 
 		//DEBUGGING STUFF REMOVE THIS!!!
 		if (Input.GetKey(KeyCode.Y)) {
