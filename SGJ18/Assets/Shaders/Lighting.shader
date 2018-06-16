@@ -43,15 +43,23 @@ Shader "Lighting"
 			float4 _MainTex_ST;
 			float4 _LightingPos;
 			float _MaxLength;
+			float4 _MainTex_TexelSize;
 
 			v2f vert(appdata v) {
 				v2f o;
 				o.pos = mul(unity_ObjectToWorld, v.vertex);
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				//UNITY_TRANSFER_FOG(o, o.vertex);
 				return o;
 			}
+
+			/*float4 box(sampler2D tex, float2 uv, float4 size) {
+
+				float4 c = tex2D(tex, uv + float2(-size.x, size.y)) + tex2D(tex, uv + float2(0, size.y)) + tex2D(tex, uv + float2(size.x, size.y))
+					+ tex2D(tex, uv + float2(-size.x, 0)) + tex2D(tex, uv + float2(0, 0)) + tex2D(tex, uv + float2(size.x, 0))
+					+ tex2D(tex, uv + float2(-size.x, -size.y)) + tex2D(tex, uv + float2(0, -size.y)) + tex2D(tex, uv + float2(size.x, -size.y))
+					return c / 9;
+			}*/
 
 			fixed4 frag (v2f i) : SV_Target
 			{

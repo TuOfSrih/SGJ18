@@ -5,6 +5,7 @@
 		_MainTex ("Texture", 2D) = "white" {}
 		_LightingTex("LightingTex", 2D) = "white" {}
 		_Normals("Normals", 2D) = "white" {}
+		_Ambient("Ambient", Float) = 0.95
 	}
 	SubShader
 	{
@@ -35,6 +36,8 @@
 			sampler2D _Normals;
 			sampler2D _LightingTex;
 			float4 _MainTex_ST;
+			float _Ambient;
+			
 			
 			v2f vert (appdata v)
 			{
@@ -53,8 +56,10 @@
 				normals = normals * 2 - 1;
 				float intensity = dot(normals.xyz, normalize(float3(lighting.xy, 1) * 2 - 1));
 				intensity *= lighting.z;
-				return col * intensity;
+				return col * intensity * _Ambient + col * (1 -_Ambient);
 			}
+
+
 			ENDCG
 		}
 	}

@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:SGJ18/Assets/Boden_h1.png.meta
+<<<<<<< Updated upstream
+guid: ff9b1d605f07a274eb2d4ca98794c495
+=======
+guid: 604793cd9056dea41ba4b4eb64c2883f
+>>>>>>> Stashed changes
+=======
 guid: e3948ba69a1cff14c85664b7495f237f
+>>>>>>> master:SGJ18/Assets/Sprites/Boden_h2.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -84,7 +92,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< HEAD:SGJ18/Assets/Boden_h1.png.meta
+<<<<<<< Updated upstream
+    spriteID: 373b8d22d4d06e34d904eae6b8b17d2b
+=======
+    spriteID: 3d2357ad91af47442b25e8468d455498
+>>>>>>> Stashed changes
+=======
     spriteID: de476f54bc0a4d24f904940534be6726
+>>>>>>> master:SGJ18/Assets/Sprites/Boden_h2.png.meta
     vertices: []
     indices: 
     edges: []
