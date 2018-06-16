@@ -27,6 +27,9 @@ public class PlayerMovement : MonoBehaviour {
 	public DialogueTrigger diary;
 	public DialogueManager dialogue;
 
+	[HideInInspector]
+	public Vector2 facing;
+
 	void Start () {
 		instance = this;
 		rigidbody = GetComponent<Rigidbody2D>();
@@ -40,7 +43,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 		Vector2 target = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * movementSpeed;
 		rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, target, acceleration * Time.deltaTime);
-		transform.up = (Vector2)UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+		facing = (Vector2)UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
 		
 		if (nearCloset)
 		{

@@ -11,6 +11,7 @@ public class Renderer : MonoBehaviour {
     public int coneAngle = 15;
     public float length = 5;
 	public float rayStartOffset = 1.5f;
+	public int raysPerDeg = 2;
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination) {
         RenderTexture albedo = source;
@@ -19,22 +20,23 @@ public class Renderer : MonoBehaviour {
 
     }
     private Mesh assembleMesh() {
-        Vector2 forward = PlayerMovement.instance.transform.up;
+        Vector2 forward = PlayerMovement.instance.facing;
         float angle = Mathf.Atan2(forward.y, forward.x);
-        Vector3[] vertices = new Vector3[coneAngle * 2 + 2];
-        for (int i = -coneAngle; i <= coneAngle; i++) {
-            Vector3 cast = new Vector2(Mathf.Cos(angle + i * Mathf.Deg2Rad), Mathf.Sin(angle + i * Mathf.Deg2Rad));
+        Vector3[] vertices = new Vector3[coneAngle * raysPerDeg * 2 + 2];
+        for (int i = 0; i <= coneAngle * 2 * raysPerDeg; i++) {
+			float ang = angle + ((float)i / raysPerDeg - coneAngle) * Mathf.Deg2Rad;
+			Vector3 cast = new Vector2(Mathf.Cos(ang), Mathf.Sin(ang));
             RaycastHit2D hit = Physics2D.Raycast(PlayerMovement.instance.transform.position + rayStartOffset * cast.normalized, cast, length - rayStartOffset);
 			if (hit.collider == null) {
-				vertices[i + coneAngle] = PlayerMovement.instance.transform.position + cast.normalized * length;
+				vertices[i] = PlayerMovement.instance.transform.position + cast.normalized * length;
 			} else {
-				vertices[i + coneAngle] = hit.point;
+				vertices[i] = hit.point;
 			}
         }
         vertices[vertices.Length - 1] = PlayerMovement.instance.transform.position;
 
-        int[] triangles = new int[6 * coneAngle];
-        for (int i = 0; i < 2 * coneAngle; i++) {
+        int[] triangles = new int[6 * raysPerDeg * coneAngle];
+        for (int i = 0; i < 2 * raysPerDeg * coneAngle; i++) {
 			triangles[3 * i + 0] = i + 1;
 			triangles[3 * i + 1] = i;
             triangles[3 * i + 2] = vertices.Length - 1;
