@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorldNode : MonoBehaviour {
+public class WorldNode : MonoBehaviour, IHeapItem<WorldNode> {
     public int gCost;
     public int hCost;
 
@@ -13,11 +13,35 @@ public class WorldNode : MonoBehaviour {
     public List<WorldNode> neighbors;
     public WorldNode parent;
 
+    private int heapIndex;
+
     public int Cost
     {
         get
         {
             return gCost + hCost;
         }
+    }
+
+    public int HeapIndex
+    {
+        get
+        {
+            return heapIndex;
+        }
+        set
+        {
+            heapIndex = value;
+        }
+    }
+
+    public int compareTo(WorldNode b)
+    {
+        int compare = Cost.CompareTo(b.Cost);
+        if(compare == 0)
+        {
+            compare = hCost.CompareTo(b.hCost);
+        }
+        return -compare;
     }
 }
