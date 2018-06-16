@@ -32,7 +32,6 @@ public class Pathfinding : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
 	void Start () {
         path = new Stack<WorldNode>();
         currentTile = map.GetNodeAt(transform.position);
@@ -119,7 +118,7 @@ public class Pathfinding : MonoBehaviour {
     IEnumerator WalkPath(WorldNode dst)
     {
         //Debug.Log("Started Walking.");
-        FindPath(currentTile, dst);
+        path = FindPath(currentTile, dst);
         //Debug.Log("Found Path to [" + dst.gridX + "," + dst.gridY + "]");
         //StartCoroutine(FindPath(currentTile, dst));
         while(true)
@@ -137,9 +136,7 @@ public class Pathfinding : MonoBehaviour {
         }
     }
 
-    
-
-    void FindPath(WorldNode start, WorldNode end)
+    Stack<WorldNode> FindPath(WorldNode start, WorldNode end)
     {
         Debug.Log("Started Path finding " + end.walkable);
         bool pathSuccess = false;
@@ -194,20 +191,22 @@ public class Pathfinding : MonoBehaviour {
         }
         if (pathSuccess)
         {
-            RetracePath(start, end);
+            return RetracePath(start, end);
         }
+        return new Stack<WorldNode>();
     }
 
-    void RetracePath(WorldNode start, WorldNode end)
+    Stack<WorldNode> RetracePath(WorldNode start, WorldNode end)
     {
-        path = new Stack<WorldNode>();
+        Stack<WorldNode> ret = new Stack<WorldNode>();
         WorldNode currentNode = end;
 
         while(currentNode != start)
         {
-            path.Push(currentNode);
+            ret.Push(currentNode);
             currentNode = currentNode.parent;
         }
+        return ret;
     }
     
     int GetDistance(WorldNode a, WorldNode b)
