@@ -70,9 +70,6 @@ public class PlayerMovement : MonoBehaviour {
 		accel = new Vector3(0, 0, 0);
 		// get the public Joycon array attached to the JoyconManager in scene
 		joycons = JoyconManager.Instance.j;
-		if (joycons.Count < jc_ind+1){
-			Destroy(gameObject);
-		}
 		j = joycons [jc_ind];
 		StartCoroutine("HeartBeat");
 	}
