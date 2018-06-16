@@ -35,7 +35,7 @@ public class WorldNode : MonoBehaviour, IHeapItem<WorldNode> {
         }
     }
 
-    public int compareTo(WorldNode b)
+    public int CompareTo(WorldNode b)
     {
         int compare = Cost.CompareTo(b.Cost);
         if(compare == 0)
