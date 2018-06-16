@@ -60,7 +60,7 @@ public class RenderSystem : MonoBehaviour {
 
         //Blur
         RenderTexture next = RenderTexture.GetTemporary(albedo.width, albedo.height);
-        Graphics.Blit(fY, next, BlurMaterial);
+        Graphics.Blit(fY, next);
 
         //Add ambient
         RenderTexture ambientTex = RenderTexture.GetTemporary(albedo.width, albedo.height);
