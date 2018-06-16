@@ -30,7 +30,6 @@
 			struct v2f
 			{
 				float2 uv : TEXCOORD0;
-				UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
 			};
 
@@ -44,7 +43,6 @@
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
 			}
 			
@@ -52,7 +50,8 @@
 			{
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
-				
+
+			//return tex2D(_Albedo, i.uv);
 				return col * _Ambient + tex2D(_Albedo, i.uv) * (1 - _Ambient);
 			}
 			ENDCG

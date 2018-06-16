@@ -53,7 +53,7 @@
 				fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 lighting = tex2D(_LightingTex, i.uv);
 				float intensity = lighting.z;
-				return col * intensity * _Ambient + col * (1 -_Ambient);
+				return lighting * col;
 			}
 
 

@@ -58,6 +58,7 @@ public class RenderSystem : MonoBehaviour {
 		//Set material to light render material
 		Material mat = new Material(Shader.Find("Lighting")); //TODO
 		mat.SetPass(0);
+        mat.SetTexture("_MainTex", source);
 
 		//Render Lights
 		foreach (Light2D l in Light2D.lights) {
@@ -67,7 +68,7 @@ public class RenderSystem : MonoBehaviour {
         combineMat.SetTexture("_MainTex", albedo);
         combineMat.SetTexture("_LightingTex", lightTexture);
         combineMat.SetTexture("_Normals", normalTexture);
-        combineMat.SetFloat("_Ambient", ambient);
+        //combineMat.SetFloat("_Ambient", ambient);
 
 
         //Combine Lights
@@ -77,11 +78,12 @@ public class RenderSystem : MonoBehaviour {
         //Add ambient
         RenderTexture ambientTex = RenderTexture.GetTemporary(albedo.width, albedo.height);
         ambientMat.SetTexture("_Albedo", albedo);
+        ambientMat.SetFloat("_Ambient", ambient);
         Graphics.Blit(fY, ambientTex, ambientMat);
 
         Transitionmaterial.SetFloat("_Magnitude", Magnitude);
         //Transitionmaterial.SetTexture("_MainTex", albedo);
-        Graphics.Blit(fY, destination, Transitionmaterial);
+        Graphics.Blit(ambientTex, destination, Transitionmaterial);
         RenderTexture.ReleaseTemporary(fY);
         RenderTexture.ReleaseTemporary(ambientTex);
 

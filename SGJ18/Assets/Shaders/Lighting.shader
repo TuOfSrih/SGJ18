@@ -7,6 +7,7 @@ Shader "Lighting"
 		_MainTex ("Texture", 2D) = "white" {}
 		_LightingPos("LightingPos", Vector) = (0,0,0,0)
 		_MaxLength("MaxLength", Float) = 0
+		_MinDistance("MinDistance", Float) = 0
 		_Color("Color", Color) = (1,1,1,1)
 	}
 	SubShader
@@ -45,6 +46,7 @@ Shader "Lighting"
 			float4 _MainTex_ST;
 			float4 _LightingPos;
 			float _MaxLength;
+			float _MinDistance;
 			float4 _MainTex_TexelSize;
 			float4 _Color;
 
@@ -63,15 +65,18 @@ Shader "Lighting"
 					+ tex2D(tex, uv + float2(-size.x, -size.y)) + tex2D(tex, uv + float2(0, -size.y)) + tex2D(tex, uv + float2(size.x, -size.y))
 					return c / 9;
 			}*/
-
+			float interpolate(float x) {
+				return 4* (sqrt(x) - x);
+			}
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
 				//fixed4 col = //normalize(i.pos - _LightingPos) / 2 + .5;
 				float distance = length(i.pos.xy - _LightingPos.xy);
-				//col.b =  1 - distance / _MaxLength;
-
-				return tex2D(_MainTex, i.uv) * distance * _Color;
+				distance =  (distance - _MinDistance) / (_MaxLength - _MinDistance);
+				distance = interpolate(distance);
+				//return tex2D(_MainTex, i.uv);
+				return  distance * _Color;
 			}
 			ENDCG
 		}
