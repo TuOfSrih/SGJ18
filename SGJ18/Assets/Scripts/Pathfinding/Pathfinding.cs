@@ -7,34 +7,69 @@ public class Pathfinding : MonoBehaviour {
 
     private Stack<WorldNode> path;
 
-    private WorldNode nextNode;
-
     public WorldNode currentTile;
 
     public GameObject player;
 
     public float speed = 5;
 
-    // TODO delete when unnecessary!!
-    public int endX;
-    public int endY;
-
     IEnumerator trail = null;
+
+
+    public Vector3 DirToPlayer
+    {
+        get
+        {
+            return (player.transform.position - transform.position).normalized;
+        }
+    }
+
+    public int TileDistToPLayer
+    {
+        get
+        {
+            return GetDistance(currentTile, map.GetNodeAt(player.transform.position));
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
         path = new Stack<WorldNode>();
         currentTile = map.GetNodeAt(transform.position);
-        Debug.Log("[" + currentTile.gridX + "," + currentTile.gridY + "]");
-        StartCoroutine(TrailPlayer());
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
-    IEnumerator TrailPlayer()
+    public IEnumerator SearchPlayer()
+    {
+        while (true)
+        {
+            if(Random.value > 0.25)
+            {
+                WorldNode destNode = null;
+                while(destNode == null)
+                {
+                    Vector3 dir = new Vector3(Random.value, Random.value, 0) * 6 - new Vector3(3, 3, 0);
+                    destNode = map.GetNodeAt(transform.position + dir);
+                    if(destNode != null)
+                    {
+                        if (!destNode.walkable)
+                        {
+                            destNode = null;
+                        }
+                    }
+                }
+
+                if (trail != null)
+                {
+                    StopCoroutine(trail);                  
+                }
+                trail = WalkPath(destNode);
+                StartCoroutine(trail);
+            }
+            yield return new WaitForSeconds(1.3f);
+        }
+    }
+
+    public IEnumerator TrailPlayer()
     {
         while (true)
         {
@@ -44,6 +79,40 @@ public class Pathfinding : MonoBehaviour {
             trail = WalkPath(playerTile);
             StartCoroutine(trail);
             yield return new WaitForSeconds(0.7f);
+        }
+    }
+
+    public IEnumerator AbandonPlayer()
+    {
+        while (true)
+        {
+            if (Random.value > 0.15)
+            {
+                WorldNode destNode = null;
+                while (destNode == null)
+                {
+                    Vector3 dir = DirToPlayer * -1.5f;
+                    Vector3 deviation = new Vector3(Random.value, Random.value, 0) * 5 - new Vector3(2.5f, 2.5f, 0);
+                    dir -= deviation;
+
+                    destNode = map.GetNodeAt(transform.position + dir);
+                    if (destNode != null)
+                    {
+                        if (!destNode.walkable)
+                        {
+                            destNode = null;
+                        }
+                    }
+                }
+
+                if (trail != null)
+                {
+                    StopCoroutine(trail);
+                }
+                trail = WalkPath(destNode);
+                StartCoroutine(trail);
+            }
+            yield return new WaitForSeconds(1.6f);
         }
     }
 
