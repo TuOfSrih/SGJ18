@@ -185,20 +185,9 @@ public class CreateNodesFromTilemap : MonoBehaviour {
         return GetNodeAt(posx, posy);
     }
 
-
     void Awake()
     {
         unsortedNodes = new List<GameObject>();
         CreateNodes();
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
