@@ -36,11 +36,9 @@ public class CreateNodesFromTilemap : MonoBehaviour {
                     foreach(Tilemap t in obstacleLayers)
                     {
                         TileBase tb2 = t.GetTile(new Vector3Int(x, y, 0));
-
-                        Debug.Log(tb2);
+                        
                         if (tb2 != null)
                         {
-                            Debug.Log("Found obstactle");
                             foundObstacle = true;
                         }
 
@@ -122,7 +120,7 @@ public class CreateNodesFromTilemap : MonoBehaviour {
 
     }
 
-    private WorldNode GetNodeAt(int x, int y)
+    public WorldNode GetNodeAt(int x, int y)
     {
         if(x < 0 || y < 0 || x >= gridBoundX || y >= gridBoundY)
         {
@@ -178,6 +176,15 @@ public class CreateNodesFromTilemap : MonoBehaviour {
         }
         return ret;
     }
+
+    public WorldNode GetNodeAt(Vector3 pos)
+    {
+        int posx = (int)(gridBase.transform.position.x + pos.x - scanStartX);
+        int posy = (int)(gridBase.transform.position.y + pos.y - scanStartY);
+
+        return GetNodeAt(posx, posy);
+    }
+
 
     void Awake()
     {
