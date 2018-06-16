@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class CreateNodesFromTilemap : MonoBehaviour {
-    private Grid gridBase;
-    private Tilemap floor; // Maybe unnecessary
-    private List<Tilemap> obstacleLayers;
-    private GameObject nodePrefab;
+    public Grid gridBase;
+    public Tilemap floor; // Maybe unnecessary
+    public List<Tilemap> obstacleLayers;
+    public GameObject nodePrefab;
 
     public int scanStartX, scanStartY, scanEndX, scanEndY;
 
@@ -37,8 +37,10 @@ public class CreateNodesFromTilemap : MonoBehaviour {
                     {
                         TileBase tb2 = t.GetTile(new Vector3Int(x, y, 0));
 
-                        if(tb2 != null)
+                        Debug.Log(tb2);
+                        if (tb2 != null)
                         {
+                            Debug.Log("Found obstactle");
                             foundObstacle = true;
                         }
 
@@ -60,14 +62,17 @@ public class CreateNodesFromTilemap : MonoBehaviour {
                     foundTileOnLastPass = true;
 
                     WorldNode wn = node.GetComponent<WorldNode>();
-                    wn.gridX = gridX;
-                    wn.gridY = gridY;
+                    if(wn != null)
+                    {
+                        wn.gridX = gridX;
+                        wn.gridY = gridY;
+                    }
+                    
 
                     unsortedNodes.Add(node);
 
                     if (!foundObstacle)
-                    {
-                        
+                    {                       
                         wn.walkable = true;
                     }
                     else
@@ -177,6 +182,7 @@ public class CreateNodesFromTilemap : MonoBehaviour {
     void Awake()
     {
         unsortedNodes = new List<GameObject>();
+        CreateNodes();
     }
 
     // Use this for initialization

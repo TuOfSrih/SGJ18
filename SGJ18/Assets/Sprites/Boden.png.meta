@@ -50,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -64,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,10 +106,10 @@ TextureImporter:
       name: Boden_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 32
-        height: 32
+        x: 2
+        y: 398
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,7 +117,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c20676d5e61c3474eb59103cda894977
+      spriteID: 2caf75a2186ce0e468b73038f3878c46
       vertices: []
       indices: 
       edges: []
@@ -126,10 +126,10 @@ TextureImporter:
       name: Boden_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
-        height: 32
+        x: 68
+        y: 398
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,7 +137,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 499b63012fd0ce9409ac1964b63cbaa7
+      spriteID: 89f5a534e86f95342a4303aff6cd8f5b
       vertices: []
       indices: 
       edges: []
@@ -146,10 +146,10 @@ TextureImporter:
       name: Boden_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
-        height: 32
+        x: 134
+        y: 398
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90951e5b81254394ab476710c0f772f0
+      spriteID: 2d30a917a14718a438c0c0b4384127a2
       vertices: []
       indices: 
       edges: []
@@ -166,10 +166,10 @@ TextureImporter:
       name: Boden_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
+        x: 2
+        y: 332
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,7 +177,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 492a958d163344e439528d4523707bbe
+      spriteID: 6e718613fd020d84893c04699b16d093
       vertices: []
       indices: 
       edges: []
@@ -186,10 +186,10 @@ TextureImporter:
       name: Boden_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
+        x: 68
+        y: 332
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,7 +197,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51a831aea3ea5764fb0c02f92b62730c
+      spriteID: 46759e9c48d0bc84fb9cce3d58a1c354
       vertices: []
       indices: 
       edges: []
@@ -206,10 +206,10 @@ TextureImporter:
       name: Boden_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
+        x: 134
+        y: 332
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,7 +217,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b980e0ec9241ad48bee40c95886df02
+      spriteID: e85d1202251964c4d8f6cef11c735ce0
       vertices: []
       indices: 
       edges: []
@@ -226,10 +226,10 @@ TextureImporter:
       name: Boden_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 32
+        x: 2
+        y: 266
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,7 +237,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afaaeb377981f8a408d1ae8bdcf41aac
+      spriteID: e01ca02ec60f3fd4882ee08ca0ab5399
       vertices: []
       indices: 
       edges: []
@@ -246,10 +246,10 @@ TextureImporter:
       name: Boden_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
+        x: 68
+        y: 266
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,7 +257,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 577935a0f04b22b49ac147399a3d4be2
+      spriteID: cd5a90ef9a71188498c4f65760fdea87
       vertices: []
       indices: 
       edges: []
@@ -266,10 +266,10 @@ TextureImporter:
       name: Boden_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
+        x: 134
+        y: 266
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,7 +277,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9bc92cb5ba5c6847adb4131ce4981fd
+      spriteID: d643e4086b409c04784884bf7d0b0ae3
       vertices: []
       indices: 
       edges: []
@@ -286,10 +286,10 @@ TextureImporter:
       name: Boden_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
+        x: 2
+        y: 200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,7 +297,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98335258d4ce6e64ebbb32f0662dd2cb
+      spriteID: 5771a71aa532ef14693c368397dc88df
       vertices: []
       indices: 
       edges: []
@@ -306,10 +306,10 @@ TextureImporter:
       name: Boden_10
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 68
+        y: 200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,7 +317,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55486d427d469324082320bb1cdaf460
+      spriteID: f5a45f4b51b08a94d973b0fcdfa14bc0
       vertices: []
       indices: 
       edges: []
@@ -326,10 +326,10 @@ TextureImporter:
       name: Boden_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 134
+        y: 200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,7 +337,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0dc5926b097b33438f86dffa91ede5c
+      spriteID: b3ee19d6137a06b409b774f1f8339ac6
       vertices: []
       indices: 
       edges: []
@@ -346,10 +346,10 @@ TextureImporter:
       name: Boden_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 2
+        y: 134
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,7 +357,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75dbb7260b7faf0448e438ecc6ccfe7b
+      spriteID: 72662d27cc2416a42a74ae317bd251a1
       vertices: []
       indices: 
       edges: []
@@ -366,10 +366,10 @@ TextureImporter:
       name: Boden_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 68
+        y: 134
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,7 +377,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a66aa4748f2c845ae79d06018fa864
+      spriteID: fd039d41f3684b444b8f93edc37728e6
       vertices: []
       indices: 
       edges: []
@@ -386,10 +386,10 @@ TextureImporter:
       name: Boden_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 134
+        y: 134
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,7 +397,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4243dc99ddb21514c9b516609826a72d
+      spriteID: ff2d58e9fd998964d91ec8163bf708c2
       vertices: []
       indices: 
       edges: []
@@ -406,10 +406,10 @@ TextureImporter:
       name: Boden_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 2
+        y: 68
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,7 +417,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c42b643c7290cb54bbdf85ffcf2a0168
+      spriteID: 1393afa2822f0484cacb9bf4e2d97adb
       vertices: []
       indices: 
       edges: []
@@ -426,10 +426,10 @@ TextureImporter:
       name: Boden_16
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 68
+        y: 68
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,7 +437,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48113eeb0f81ed54fb06d41e57b9703c
+      spriteID: ff60b20301bfa984eb78336f4d11b09c
       vertices: []
       indices: 
       edges: []
@@ -446,10 +446,10 @@ TextureImporter:
       name: Boden_17
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 134
+        y: 68
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,7 +457,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5dd7bc85ff9e8f4e8b36db2641928a5
+      spriteID: 951cac24e0b79c54ca69c5ba1c0f442c
       vertices: []
       indices: 
       edges: []
@@ -466,10 +466,10 @@ TextureImporter:
       name: Boden_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 2
+        y: 2
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,7 +477,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56bd065cc2688fe458d09fa2ba06263a
+      spriteID: 14396b792419c1445b26468a106e5684
       vertices: []
       indices: 
       edges: []
@@ -486,10 +486,10 @@ TextureImporter:
       name: Boden_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 68
+        y: 2
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,7 +497,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ec45514d397a24fb05f787fbde19fc
+      spriteID: 166aef8806f0be14f9431cccfce85219
       vertices: []
       indices: 
       edges: []
@@ -506,10 +506,10 @@ TextureImporter:
       name: Boden_20
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 134
+        y: 2
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,7 +517,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ccd11ffc2a6d9e41ae9aee3f68c5dd2
+      spriteID: eee0dc97e078de040875dc4f37011010
       vertices: []
       indices: 
       edges: []
