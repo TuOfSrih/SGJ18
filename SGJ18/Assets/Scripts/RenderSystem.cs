@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class RenderSystem : MonoBehaviour {
 
-    Shader replacement;
-    RenderTexture normalTexture;
+    public Shader replacement;
+    public RenderTexture normalTexture;
     public Camera normalCam;
+    public Shader combine;
 
-	public Texture clearTexture;
 	RenderTexture lightTexture;
+
 
 	Material clearMat;
 
 	void Start() {
 		lightTexture = new RenderTexture(Screen.width, Screen.height, 0);
-		normalTexture = new RenderTexture(Screen.width, Screen.height, 0);
+		//normalTexture = new RenderTexture(Screen.width, Screen.height, 0);
 		clearMat = new Material(Shader.Find("Unlit/Color"));
 		clearMat.SetColor("_Color", Color.black);
 	}
@@ -24,8 +25,8 @@ public class RenderSystem : MonoBehaviour {
         RenderTexture albedo = source;
 
 
-
 		if (normalCam != null) {
+            normalCam.SetReplacementShader(replacement, "");
 			normalCam.Render();
 		}
 
@@ -34,15 +35,19 @@ public class RenderSystem : MonoBehaviour {
 		Graphics.Blit(lightTexture, lightTexture, clearMat, 0);
 
 		//Set material to light render material
-		Material mat = new Material(Shader.Find("Unlit/Color")); //TODO
+		Material mat = new Material(Shader.Find("Lighting")); //TODO
 		mat.SetPass(0);
 
 		//Render Lights
 		foreach (Light2D l in Light2D.lights) {
-			l.Render();
+			l.Render(mat);         
 		}
+        Material combineMat = new Material(combine);
+        combineMat.SetTexture("_MainTex", albedo);
+        combineMat.SetTexture("_LightingTex", lightTexture);
+        combineMat.SetTexture("_Normals", normalTexture);
 
-		Graphics.Blit(source, destination);
+        Graphics.Blit(source, destination, combineMat);
 
 		//DEBUGGING STUFF REMOVE THIS!!!
 		if (Input.GetKey(KeyCode.Y)) {
