@@ -7,8 +7,11 @@ public class RayLight2D : Light2D {
 	public int coneAngle = 15;
 	public float rayStartOffset = 1.5f;
 	public int raysPerDeg = 2;
+    public float minDistance;
+   
 
 	public override void Render(Material mat) {
+        mat.SetFloat("_MinDistance", minDistance);
 		base.Render(mat);
 		//Debug.Log("Rendering");
 		Graphics.DrawMeshNow(assembleMesh(), Vector3.zero, Quaternion.identity);
