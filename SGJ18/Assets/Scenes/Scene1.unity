@@ -469,7 +469,7 @@ Prefab:
     - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
         type: 2}
       propertyPath: ambient
-      value: 0.95
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 20678623194017278, guid: 5ff3d0532cac7b445a83a07d594c2504,
         type: 2}
@@ -485,6 +485,11 @@ Prefab:
       propertyPath: ambientMat
       value: 
       objectReference: {fileID: 2100000, guid: fe87f651e066939459975b9e66b74cb6, type: 2}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: BlurMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: ef3bd3d5513e73e4bb9e4f26282eb0cf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
   m_IsPrefabParent: 0
@@ -809,6 +814,21 @@ Prefab:
     - target: {fileID: 212848044641400466, guid: c6ba0164328844e4da42d8ca44c2971b,
         type: 2}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508126685592678, guid: c6ba0164328844e4da42d8ca44c2971b,
+        type: 2}
+      propertyPath: lightColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508126685592678, guid: c6ba0164328844e4da42d8ca44c2971b,
+        type: 2}
+      propertyPath: lightColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508126685592678, guid: c6ba0164328844e4da42d8ca44c2971b,
+        type: 2}
+      propertyPath: lightColor.b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
