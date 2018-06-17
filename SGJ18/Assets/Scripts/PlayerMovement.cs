@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour {
 	private Joycon j;
 	private RayLight2D flashlight;
 
-	private MusicManager music;
+	//private MusicManager music;
 
 	void Start () {
 		instance = this;
@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour {
 		nearDiary = false;
 		isHidden = false;
 		isReading = true;
-		music = GameObject.FindObjectOfType<MusicManager>();
+		//music = GameObject.FindObjectOfType<MusicManager>();
 		wallbump = 0;
 		source = GetComponents<AudioSource>();
 		test = true;
@@ -103,12 +103,12 @@ public class PlayerMovement : MonoBehaviour {
 		if (realDistance > radius)
 		{
 			distance = 0;
-			music.source.volume = 0.05f;
+			//music.source.volume = 0.05f;
 		}
 		else
 		{
 			distance = 1 - (realDistance / radius) * 0.5f;
-			music.source.volume = 0.015f;
+			//music.source.volume = 0.015f;
 		}
 
 		if (diaryIsRead)
@@ -242,7 +242,7 @@ public class PlayerMovement : MonoBehaviour {
 			if (diaryIsRead)
 			{
 				//TODO: übergang und animation
-				music.level1 = true;
+				//music.level1 = true;
 				StopAllCoroutines();
 				StartCoroutine("waitASec");
 			}

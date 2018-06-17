@@ -15,16 +15,18 @@ public class MusicManager : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
 	{
-		MusicManager[] objects = FindObjectsOfType<MusicManager>();
+		
+		/*MusicManager[] objects = FindObjectsOfType<MusicManager>();
 		if (objects.Length > 1)
 		{
 			Destroy(gameObject);
 		}
 		source = GetComponent<AudioSource>();
-		changeSong(1);
+		changeSong(1);*/
 		level1 = false;
 		level2 = false;
 		level3 = false;
+		
 	}
 
 	public void changeSong(int songCount)
