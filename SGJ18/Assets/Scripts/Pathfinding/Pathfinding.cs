@@ -11,7 +11,7 @@ public class Pathfinding : MonoBehaviour {
 
     public GameObject player;
 
-    public float speed = 5;
+    public float speed = 4;
 
     IEnumerator trail = null;
 
@@ -133,9 +133,14 @@ public class Pathfinding : MonoBehaviour {
                 }
                 currentTile = path.Pop();
             }
-            transform.position = Vector3.MoveTowards(transform.position, currentTile.transform.position, speed * Time.deltaTime);
+
+            if (!player.GetComponent<PlayerMovement>().isReading)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, currentTile.transform.position,
+                    speed * Time.deltaTime);
+            }
+
             animator.SetBool("isWalking", true);
-            Debug.Log("X: " + animator.GetFloat("x"));
             Vector2 vector = ((Vector2) currentTile.transform.position - (Vector2) transform.position).normalized;
             animator.SetFloat("x", vector.x);
             animator.SetFloat("y", vector.y);

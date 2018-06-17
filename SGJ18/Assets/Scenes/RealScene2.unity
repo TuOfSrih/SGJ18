@@ -156,11 +156,40 @@ Prefab:
       propertyPath: m_TagString
       value: boss
       objectReference: {fileID: 0}
+    - target: {fileID: 212171556306969084, guid: cf3c7a8f3b764e348997d4add6d75215,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2b7ad09055225346bc893e71548396a,
+        type: 3}
+    - target: {fileID: 4693002207049952, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693002207049952, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 95274982403819514, guid: cf3c7a8f3b764e348997d4add6d75215,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4ea8ab05189c51e49aa9e050aeee768e, type: 2}
+    - target: {fileID: 95213878052377044, guid: cf3c7a8f3b764e348997d4add6d75215,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114415731817049110, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
     - {fileID: 114551860513721798, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &51368664 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95274982403819514, guid: cf3c7a8f3b764e348997d4add6d75215,
+    type: 2}
+  m_PrefabInternal: {fileID: 34137984}
 --- !u!1 &152845726
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +613,7 @@ MonoBehaviour:
   currentTile: {fileID: 0}
   player: {fileID: 1740233627}
   speed: 5
-  animator: {fileID: 1506203106}
+  animator: {fileID: 51368664}
 --- !u!1001 &449713467
 Prefab:
   m_ObjectHideFlags: 0
@@ -686,6 +715,11 @@ Prefab:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1995748058}
+    - target: {fileID: 114042147368578152, guid: c6ba0164328844e4da42d8ca44c2971b,
+        type: 2}
+      propertyPath: bossAnim
+      value: 
+      objectReference: {fileID: 51368664}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6ba0164328844e4da42d8ca44c2971b, type: 2}
   m_IsPrefabParent: 0
@@ -953,6 +987,14 @@ Prefab:
         type: 2}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114107861465077744, guid: 64b98667e27c85c419784bbd07375e3a,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "\t\tDez. 11.200X\n\nA bug we do not really need. \r\nAt sleepy time
+        he beats a path \r\nStraight to the bedroom or the bath. \r\nEverywhere this
+        wiggly bug.\r\nBut what he hates is the heat.\r\nA little match, a little
+        flame.\r\nNever ever paths again...\r"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b98667e27c85c419784bbd07375e3a, type: 2}
@@ -1284,11 +1326,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1506203106 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95689649998640634, guid: cf3c7a8f3b764e348997d4add6d75215,
-    type: 2}
-  m_PrefabInternal: {fileID: 34137984}
 --- !u!1 &1572710147
 GameObject:
   m_ObjectHideFlags: 0

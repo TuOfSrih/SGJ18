@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour {
 	public bool isReading;
 	private float rad;
 
+	public Animator bossAnim;
+
 	public SpriteRenderer sprite;
 	public bool isHidden;
 	public bool diaryIsRead;
@@ -280,15 +282,18 @@ public class PlayerMovement : MonoBehaviour {
 
 	IEnumerator waitASec()
 	{
-		yield return new WaitForSeconds(1);
-		
+		bossAnim.SetBool("isDead", true);
+		yield return new WaitForSeconds(2.5f);
 		j.SetRumble(0, 0, 0, 0);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
 	}
 	
 	IEnumerator waitASec2()
 	{
-		yield return new WaitForSeconds(1);
+		animator.SetBool("isDead", true);
+		GetComponent<RayLight2D>().enabled = false;
+		yield return new WaitForSeconds(2.5f);
+		GameObject.Find("Main Camera").GetComponent<RenderSystem>().startFadeOut();
 		
 		j.SetRumble(0, 0, 0, 0);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);

@@ -960,6 +960,13 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 2052351247}
+    - target: {fileID: 114107861465077744, guid: 64b98667e27c85c419784bbd07375e3a,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "A icky feeling on the body.\r\nI scratch and scratch.\r\nThe flesh is
+        red.\r\nAnd the icking does not end.\r\nThere are spiders under my skin.\r\nAll
+        the torture, pain, and suffering, from IT, \r\nI will never be free..\r"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b98667e27c85c419784bbd07375e3a, type: 2}
   m_IsPrefabParent: 0
@@ -2227,12 +2234,12 @@ Tilemap:
   - first: {x: 0, y: -9, z: 0}
     second:
       m_TileIndex: 31
-      m_TileSpriteIndex: 44
+      m_TileSpriteIndex: 40
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
-      m_ColliderType: 0
+      m_ColliderType: 2
   - first: {x: 13, y: -3, z: 0}
     second:
       m_TileIndex: 6
@@ -2748,7 +2755,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: ca0cdfe95c820cc4fbf63a6060ae5209, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 1ada825d4f40132499fa96621d4082ba, type: 2}
+    m_Data: {fileID: 11400000, guid: bb30ea4b264ecfc4fb1d33abdd72609d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2e3681085425f7c4f9c81fb6107e8ff7, type: 2}
   - m_RefCount: 3
@@ -2860,15 +2867,15 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300038, guid: 037bfa2e39cf64442b36ec514a083438, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300042, guid: f4a49b731cdbb0d40a11c22f3a8f6e39, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300098, guid: f4a49b731cdbb0d40a11c22f3a8f6e39, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300012, guid: 037bfa2e39cf64442b36ec514a083438, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300004, guid: 037bfa2e39cf64442b36ec514a083438, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 21300028, guid: 037bfa2e39cf64442b36ec514a083438, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300022, guid: 037bfa2e39cf64442b36ec514a083438, type: 3}

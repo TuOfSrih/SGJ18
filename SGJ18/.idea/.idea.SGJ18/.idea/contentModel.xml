@@ -40,6 +40,7 @@
           <e p="RenderSystem.cs" t="Include" />
           <e p="Schloss.cs" t="Include" />
           <e p="Spider.cs" t="Include" />
+          <e p="StartGame.cs" t="Include" />
           <e p="TilemapCopy.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">

@@ -960,6 +960,13 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 2052351247}
+    - target: {fileID: 114107861465077744, guid: 64b98667e27c85c419784bbd07375e3a,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "There's a centipede inside my heart.\r\nFor the bug is my pain.\r\nSometimes
+        it travels to my brain.\r\nThere's a centipede inside of me.\r\nAll the torture,
+        pain, and suffering, from IT, \r\nI will never be free..\r"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b98667e27c85c419784bbd07375e3a, type: 2}
   m_IsPrefabParent: 0

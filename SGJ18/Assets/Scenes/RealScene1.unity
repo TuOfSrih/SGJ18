@@ -214,8 +214,7 @@ Prefab:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 111893347839219740, guid: b3a109176787d6040b8aac164027cd28, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3a109176787d6040b8aac164027cd28, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &152845726
@@ -792,6 +791,11 @@ Prefab:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 554201676}
+    - target: {fileID: 114042147368578152, guid: c6ba0164328844e4da42d8ca44c2971b,
+        type: 2}
+      propertyPath: bossAnim
+      value: 
+      objectReference: {fileID: 1233466657}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6ba0164328844e4da42d8ca44c2971b, type: 2}
   m_IsPrefabParent: 0
@@ -3251,7 +3255,7 @@ Animator:
   m_GameObject: {fileID: 1233466655}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f7a3ec697d86ec45bb0bc5a59156fc5, type: 2}
+  m_Controller: {fileID: 22100000, guid: 7a15e0a8870c75146969fd14c93345e5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
