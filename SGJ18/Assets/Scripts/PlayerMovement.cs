@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Jobs.LowLevel.Unsafe;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 	
@@ -253,6 +254,7 @@ public class PlayerMovement : MonoBehaviour {
 				StartCoroutine("waitASec");
 			}
 		}
+		
 		if (!coll.CompareTag("closet")) return;
 		nearCloset = true;
 		closet = coll.gameObject;
@@ -262,7 +264,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(10);
 		j.SetRumble(0, 0, 0, 0);
-		Application.LoadLevel(0);
+		SceneManager.LoadScene(0);
 	}
 	
 	void OnTriggerExit2D(Collider2D coll)

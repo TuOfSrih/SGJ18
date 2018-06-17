@@ -15,7 +15,9 @@ public class Light2D : MonoBehaviour {
 		if (lights == null) {
 			lights = new List<Light2D>();
 		}
+		
 		lights.Add(this);
+		
 	}
 
     private void Update() {
@@ -29,4 +31,8 @@ public class Light2D : MonoBehaviour {
         mat.SetPass(0);
 	}
 
+	void OnDestroy()
+	{
+		lights.Remove(this);
+	}
 }
