@@ -23,10 +23,10 @@ public class Cry : MonoBehaviour
 
 	void Update()
 	{
-		if (player.diaryIsRead && (j.GetButtonDown(Joycon.Button.DPAD_DOWN)
-		                           || j.GetButtonDown(Joycon.Button.DPAD_UP)
-		                           || j.GetButtonDown(Joycon.Button.DPAD_RIGHT)
-		                           || j.GetButtonDown(Joycon.Button.DPAD_LEFT)))
+		if (player.diaryIsRead && (player.j.GetButtonDown(Joycon.Button.DPAD_DOWN)
+		                           || player.j.GetButtonDown(Joycon.Button.DPAD_UP)
+		                           || player.j.GetButtonDown(Joycon.Button.DPAD_RIGHT)
+		                           || player.j.GetButtonDown(Joycon.Button.DPAD_LEFT)))
 		{
 			//TODO: animation, load level
 			music.level3 = true;
