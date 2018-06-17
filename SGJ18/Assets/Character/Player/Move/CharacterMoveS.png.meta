@@ -1,7 +1,17 @@
 fileFormatVersion: 2
 guid: 8d3f9e6bfabe5b741945cf75faba72f6
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CharacterMoveS_0
+    21300002: CharacterMoveS_1
+    21300004: CharacterMoveS_2
+    21300006: CharacterMoveS_3
+    21300008: CharacterMoveS_4
+    21300010: CharacterMoveS_5
+    21300012: CharacterMoveS_6
+    21300014: CharacterMoveS_7
+    21300016: CharacterMoveS_8
+    21300018: CharacterMoveS_9
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -38,7 +48,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +77,220 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CharacterMoveS_0
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1047
+        width: 147
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c41e0a972ef9d42ba783c3e945ff1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_1
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1045
+        width: 147
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38205cf4d024284ca177732008d9edc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_2
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1046
+        width: 147
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce6527bb8b5ff24788d8fc759656ab1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 706
+        width: 147
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8fd22abef9009469aa339ac02aa22f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_4
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 702
+        width: 147
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb9deae089d3c240959d71fdc0a3724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_5
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 702
+        width: 147
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d112b6dfda04904498871a25e565acd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 366
+        width: 147
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde66d4539e22674ab1f1608c8be9e44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_7
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 365
+        width: 147
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a224b156dd511ec4282f093d47fbdc86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_8
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 365
+        width: 147
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000780ca030425845b24e78754f9bfd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterMoveS_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 27
+        width: 147
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6599d7aeff35b45bf734ce01d68aa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -15,6 +15,7 @@ public class Pathfinding : MonoBehaviour {
 
     IEnumerator trail = null;
 
+    public Animator animator;
 
     public Vector3 DirToPlayer
     {
@@ -132,6 +133,11 @@ public class Pathfinding : MonoBehaviour {
                 currentTile = path.Pop();
             }
             transform.position = Vector3.MoveTowards(transform.position, currentTile.transform.position, speed * Time.deltaTime);
+            animator.SetBool("isWalking", true);
+            Debug.Log("X: " + animator.GetFloat("x"));
+            Vector2 vector = ((Vector2) currentTile.transform.position - (Vector2) transform.position).normalized;
+            animator.SetFloat("x", vector.x);
+            animator.SetFloat("y", vector.y);
             yield return null;
         }
     }
