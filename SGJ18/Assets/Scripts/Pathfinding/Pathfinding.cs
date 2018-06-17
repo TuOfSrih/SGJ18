@@ -15,7 +15,6 @@ public class Pathfinding : MonoBehaviour {
 
     IEnumerator trail = null;
 
-
     public Vector3 DirToPlayer
     {
         get
@@ -46,7 +45,7 @@ public class Pathfinding : MonoBehaviour {
                 WorldNode destNode = null;
                 while(destNode == null)
                 {
-                    Vector3 dir = new Vector3(Random.value, Random.value, 0) * 6 - new Vector3(3, 3, 0);
+                    Vector3 dir = new Vector3(Random.value, Random.value, 0) * 10 - new Vector3(5, 5, 0);
                     destNode = map.GetNodeAt(transform.position + dir);
                     if(destNode != null)
                     {
@@ -64,7 +63,7 @@ public class Pathfinding : MonoBehaviour {
                 trail = WalkPath(destNode);
                 StartCoroutine(trail);
             }
-            yield return new WaitForSeconds(1.3f);
+            yield return new WaitForSeconds(1.6f);
         }
     }
 
@@ -83,6 +82,7 @@ public class Pathfinding : MonoBehaviour {
 
     public IEnumerator AbandonPlayer()
     {
+        yield return new WaitForSeconds(1.4f);
         while (true)
         {
             if (Random.value > 0.15)
@@ -91,7 +91,7 @@ public class Pathfinding : MonoBehaviour {
                 while (destNode == null)
                 {
                     Vector3 dir = DirToPlayer * -1.5f;
-                    Vector3 deviation = new Vector3(Random.value, Random.value, 0) * 5 - new Vector3(2.5f, 2.5f, 0);
+                    Vector3 deviation = new Vector3(Random.value, Random.value, 0) * 7 - new Vector3(3.5f, 3.5f, 0);
                     dir -= deviation;
 
                     destNode = map.GetNodeAt(transform.position + dir);
@@ -111,7 +111,7 @@ public class Pathfinding : MonoBehaviour {
                 trail = WalkPath(destNode);
                 StartCoroutine(trail);
             }
-            yield return new WaitForSeconds(1.6f);
+            yield return new WaitForSeconds(1.8f);
         }
     }
 

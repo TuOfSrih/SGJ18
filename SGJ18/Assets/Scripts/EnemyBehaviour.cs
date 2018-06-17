@@ -28,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(state);
 		if(state == EnemyState.Searching)
         {
             // Check distance and change State to
