@@ -38,6 +38,7 @@
             <state relative-caret-position="135">
               <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="29" />
               <folding>
+<<<<<<< HEAD
                 <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
                 <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
                 <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -73,6 +74,43 @@
                 <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
                 <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
                 <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+                <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+                <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+                <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+                <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+                <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+                <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+                <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
@@ -273,12 +311,20 @@
       <option name="presentableId" value="Default" />
       <updated>1529093849861</updated>
       <workItem from="1529093855639" duration="10381000" />
+<<<<<<< HEAD
       <workItem from="1529179892592" duration="4156000" />
+=======
+      <workItem from="1529179892592" duration="4525000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="18200000" />
+=======
+    <option name="totallyTimeSpent" value="18569000" />
+>>>>>>> master
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,6 +426,7 @@
         <state relative-caret-position="1560">
           <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
           <folding>
+<<<<<<< HEAD
             <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
             <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -415,6 +462,43 @@
             <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+            <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+            <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+            <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+            <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -479,6 +563,7 @@
         <state relative-caret-position="1560">
           <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
           <folding>
+<<<<<<< HEAD
             <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
             <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -514,6 +599,43 @@
             <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+            <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+            <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+            <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+            <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -566,6 +688,7 @@
         <state relative-caret-position="1515">
           <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
           <folding>
+<<<<<<< HEAD
             <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
             <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -601,6 +724,43 @@
             <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+            <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+            <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+            <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+            <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -667,6 +827,7 @@
         <state relative-caret-position="-1177">
           <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
           <folding>
+<<<<<<< HEAD
             <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
             <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -702,6 +863,43 @@
             <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+            <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+            <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+            <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+            <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -756,6 +954,7 @@
         <state relative-caret-position="1515">
           <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
           <folding>
+<<<<<<< HEAD
             <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
             <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -791,6 +990,43 @@
             <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+            <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+            <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+            <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+            <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -857,6 +1093,7 @@
         <state relative-caret-position="-7">
           <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
           <folding>
+<<<<<<< HEAD
             <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
             <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -892,6 +1129,43 @@
             <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+            <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+            <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+            <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+            <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -1004,6 +1278,7 @@
         <state relative-caret-position="135">
           <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="29" />
           <folding>
+<<<<<<< HEAD
             <marker date="1529199669796" expanded="false" signature="6:131" ph="..." />
             <marker date="1529199669796" expanded="true" signature="177:6366" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="1085:1661" ph="{...}" />
@@ -1039,6 +1314,43 @@
             <marker date="1529199669796" expanded="true" signature="5854:6361" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6225:6278" ph="{...}" />
             <marker date="1529199669796" expanded="true" signature="6286:6357" ph="{...}" />
+=======
+            <marker date="1529200034380" expanded="false" signature="6:131" ph="..." />
+            <marker date="1529200034380" expanded="true" signature="177:6366" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1085:1661" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1680:5390" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1785:1810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1817:1875" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1895:1920" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="1972:1997" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2018:3807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2075:2125" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2133:2184" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2202:3019" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="2437:2559" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="2696:2883" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transfo ... */" />
+            <marker date="1529200034380" expanded="true" signature="3027:3803" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3288:3410" ph="/* facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) - ... */" />
+            <marker date="1529200034380" expanded="true" signature="3517:3673" ph="/* facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3; ... */" />
+            <marker date="1529200034380" expanded="true" signature="3833:3910" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="3932:4738" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4275:4734" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4337:4528" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4537:4724" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="4758:5387" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5101:5383" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5164:5237" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5246:5378" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5431:5595" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5466:5495" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5636:5810" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5671:5701" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5758:5807" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5836:6364" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="5854:6361" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6225:6278" ph="{...}" />
+            <marker date="1529200034380" expanded="true" signature="6286:6357" ph="{...}" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
