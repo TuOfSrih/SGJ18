@@ -16,7 +16,7 @@ public class Boss : MonoBehaviour
 			if (other.GetComponent<PlayerMovement>().diaryIsRead)
 			{
 				//TODO: übergang und animation
-				music.level1 = true;
+				//music.level1 = true;
 				Application.LoadLevel(0);
 			}
 			else

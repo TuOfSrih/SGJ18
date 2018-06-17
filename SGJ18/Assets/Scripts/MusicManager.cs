@@ -8,9 +8,7 @@ public class MusicManager : MonoBehaviour
 	public AudioClip[] clips;
 	public AudioSource source;
 
-	public bool level1;
-	public bool level2;
-	public bool level3;
+	public int levelCount;
 	
 	// Use this for initialization
 	void Awake ()
@@ -23,10 +21,8 @@ public class MusicManager : MonoBehaviour
 		}
 		source = GetComponent<AudioSource>();
 		changeSong(1);*/
-		level1 = false;
-		level2 = false;
-		level3 = false;
-		
+		levelCount = 0;
+
 	}
 
 	public void changeSong(int songCount)

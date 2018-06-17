@@ -38,8 +38,8 @@ public class PlayerMovement : MonoBehaviour {
 	private bool nearDiary;
 	public bool isReading;
 	private float rad;
-	
 
+	public SpriteRenderer sprite;
 	public bool isHidden;
 	public bool diaryIsRead;
 
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
 	public Joycon j;
 	private RayLight2D flashlight;
 
-	//private MusicManager music;
+	private MusicManager music;
 
 	void Start () {
 		instance = this;
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour {
 		nearDiary = false;
 		isHidden = false;
 		isReading = false;
-		//music = GameObject.FindObjectOfType<MusicManager>();
+		music = GameObject.Find("MusicManager").GetComponent<MusicManager>();
 		wallbump = 0;
 		source = GetComponents<AudioSource>();
 		test = true;
@@ -100,12 +100,12 @@ public class PlayerMovement : MonoBehaviour {
 		if (realDistance > radius)
 		{
 			distance = 0;
-			//music.source.volume = 0.05f;
+			music.source.volume = 0.05f;
 		}
 		else
 		{
 			distance = 1 - (realDistance / radius) * 0.5f;
-			//music.source.volume = 0.015f;
+			music.source.volume = 0.015f;
 		}
 
 		if (diaryIsRead)
@@ -186,6 +186,7 @@ public class PlayerMovement : MonoBehaviour {
 				rigidbody.velocity = Vector3.zero;
 				if (isHidden)
 				{
+					sprite.enabled = true;
 					isHidden = false; 
 					transform.position = closet.transform.position + Vector3.down * 0.5f;
 					rigidbody.simulated = true;
@@ -193,12 +194,12 @@ public class PlayerMovement : MonoBehaviour {
 				}
 				else
 				{
+					sprite.enabled = false;
 					isHidden = true;
 					transform.position = closet.transform.position + Vector3.forward;
 					rigidbody.simulated = false;
                     flashlight.enabled = false;
 				}
-				
 			}
 		}
 		
@@ -238,7 +239,7 @@ public class PlayerMovement : MonoBehaviour {
 			if (diaryIsRead)
 			{
 				//TODO: übergang und animation
-				//music.level1 = true;
+				music.levelCount++;
 				StopAllCoroutines();
 				StartCoroutine("waitASec");
 			}
@@ -261,7 +262,7 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds(1);
 		
 		j.SetRumble(0, 0, 0, 0);
-		SceneManager.LoadScene(0, LoadSceneMode.Single);
+		SceneManager.LoadScene(1, LoadSceneMode.Single);
 	}
 	
 	void OnTriggerExit2D(Collider2D coll)

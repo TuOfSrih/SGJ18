@@ -29,7 +29,7 @@ public class Cry : MonoBehaviour
 		                           || player.j.GetButtonDown(Joycon.Button.DPAD_LEFT)))
 		{
 			//TODO: animation, load level
-			music.level3 = true;
+			music.levelCount++; 
 			SceneManager.LoadScene(1);
 		}
 	}
