@@ -282,17 +282,44 @@ public class PlayerMovement : MonoBehaviour {
 
 	IEnumerator waitASec()
 	{
-		bossAnim.SetBool("isDead", true);
+		if (bossAnim != null) 
+			bossAnim.SetBool("isDead", true);
 		yield return new WaitForSeconds(2.5f);
+		if (SceneManager.GetActiveScene().buildIndex % 2 == 0)
+		{
+			music.source.clip = music.clips[2];
+			music.source.volume = 0.4f;
+			music.source.Play();
+		}
+		else
+		{
+			music.source.clip = music.clips[1];
+			music.source.volume = 0.05f;
+			music.source.Play();
+		}
 		j.SetRumble(0, 0, 0, 0);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
 	}
 	
 	IEnumerator waitASec2()
 	{
-		animator.SetBool("isDead", true);
+		if (bossAnim != null) 
+			animator.SetBool("isDead", true);
 		GetComponent<RayLight2D>().enabled = false;
 		yield return new WaitForSeconds(2.5f);
+		if (SceneManager.GetActiveScene().buildIndex % 2 == 0)
+		{
+			music.source.clip = music.clips[2];
+			music.source.volume = 0.4f;
+			music.source.Play();
+		}
+		else
+		{
+			music.source.clip = music.clips[1];
+			music.source.volume = 0.05f;
+			music.source.Play();
+		}
+
 		GameObject.Find("Main Camera").GetComponent<RenderSystem>().startFadeOut();
 		
 		j.SetRumble(0, 0, 0, 0);

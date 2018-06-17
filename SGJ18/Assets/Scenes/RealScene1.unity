@@ -8741,6 +8741,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114885201799650610, guid: 3a539e7ac0ea6694ba486e20a1cb051f,
+        type: 2}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: bc179be6706250342b51f02f942096b5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a539e7ac0ea6694ba486e20a1cb051f, type: 2}
   m_IsPrefabParent: 0

@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1200758004804350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -2.49, z: 0}
+  m_LocalPosition: {x: -3.63, y: -13.15, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,7 +108,9 @@ MonoBehaviour:
   dialogue:
     name: Diary
     sentences:
-    - Dont read my diary.
+    - "A icky feeling on the body.\r\nI scratch and scratch.\r\nThe flesh is red.\r\nAnd
+      the icking does not end.\r\nThere are spiders under my skin.\r\nAll the torture,
+      pain, and suffering, from IT, \r\nI will never be free..\r"
 --- !u!114 &114365002729060942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,5 +168,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

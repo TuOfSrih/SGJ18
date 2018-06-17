@@ -1048,11 +1048,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: Diary
     sentences:
-    - 'bla bla bla
-
-'
+    - "All this hate and all this violence.\r\nPoor little, icky spider..\r\nI am
+      so gross!\r\npoor little, wiggly centipede..\r\nI am what we don't need.\r\nAll
+      the torture, pain, and suffering, from ME, \r\nI will never be free..\r"
 --- !u!61 &1104203872
 BoxCollider2D:
   m_ObjectHideFlags: 0
