@@ -30,7 +30,7 @@ public class RenderSystem : MonoBehaviour {
 		clearMat = new Material(Shader.Find("Unlit/Color"));
 		clearMat.SetColor("_Color", Color.black);
 
-        StartCoroutine(fadeIn());
+        startFadeIn();
     }
 
 	private void OnRenderImage(RenderTexture source, RenderTexture destination) {
@@ -94,8 +94,11 @@ public class RenderSystem : MonoBehaviour {
 		}
 	}
 
-    public void triggerTransition() {
+    public void startFadeOut() {
         StartCoroutine(fadeOut());
+    }
+    public void startFadeIn() {
+        StartCoroutine(fadeIn());
     }
     private IEnumerator fadeOut() {
         Magnitude = 0;
