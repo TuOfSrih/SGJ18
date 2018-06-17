@@ -99,7 +99,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: e0d7069e966a11142977f9e4af26dc5c, type: 2}
   m_TargetDisplay: 0
@@ -120,7 +120,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.07676221, g: 0.7075472, b: 0.18526515, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   Transitionmaterial: {fileID: 2100000, guid: 93f3a3fe0b3635344b051d5b289a0c58, type: 2}
   BlurMaterial: {fileID: 2100000, guid: ef3bd3d5513e73e4bb9e4f26282eb0cf, type: 2}
   Magnitude: 0
-  ambient: 0.95
-  fadeTime: 0
+  ambient: 0.92
+  fadeTime: 1
 --- !u!124 &124117959083831208
 Behaviour:
   m_ObjectHideFlags: 1

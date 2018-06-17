@@ -456,35 +456,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 276831488}
-    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
-        type: 2}
-      propertyPath: Transitionmaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 93f3a3fe0b3635344b051d5b289a0c58, type: 2}
-    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
-        type: 2}
-      propertyPath: ambient
-      value: 0.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 20678623194017278, guid: 5ff3d0532cac7b445a83a07d594c2504,
-        type: 2}
-      propertyPath: m_CullingMask.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1805397802828616, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
-        type: 2}
-      propertyPath: ambientMat
-      value: 
-      objectReference: {fileID: 2100000, guid: fe87f651e066939459975b9e66b74cb6, type: 2}
-    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
-        type: 2}
-      propertyPath: BlurMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: ef3bd3d5513e73e4bb9e4f26282eb0cf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
   m_IsPrefabParent: 0

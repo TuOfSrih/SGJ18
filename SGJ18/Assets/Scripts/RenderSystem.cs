@@ -29,8 +29,8 @@ public class RenderSystem : MonoBehaviour {
 		clearMat = new Material(Shader.Find("Unlit/Color"));
 		clearMat.SetColor("_Color", Color.black);
 
-        triggerTransition();
-	}
+        StartCoroutine(fadeIn());
+    }
 
 	private void OnRenderImage(RenderTexture source, RenderTexture destination) {
         RenderTexture albedo = source;
@@ -94,28 +94,26 @@ public class RenderSystem : MonoBehaviour {
 	}
 
     public void triggerTransition() {
-        StartCoroutine(transition());
+        StartCoroutine(fadeOut());
     }
-    private IEnumerator transition() {
-        while(Magnitude <= 0.5) {
+    private IEnumerator fadeOut() {
+        Magnitude = 0;
+        while (Magnitude <= 0.5) {
             Magnitude += Time.deltaTime * 0.5f / fadeTime;
             yield return null;
         }
-        //Switch Map here
-
-        while(Magnitude > 0) {
+        Magnitude = 0.5f;
+    }
+    private IEnumerator fadeIn() {
+        Magnitude = 0.5f;
+        while (Magnitude > 0) {
             Magnitude -= Time.deltaTime * 0.5f / fadeTime;
             yield return null;
         }
         Magnitude = 0;
-        
-        
     }
+        
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void OnDestroy() {
 		Debug.Log("releasing render texutres");
