@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public Animator animator;
 	
-
+	
 	public static PlayerMovement instance;
 
 	public float movementSpeed;
@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour {
 	public RayLight2D rayLight;
 
 	private Joycon j;
+	private RayLight2D flashlight;
 
 	void Start () {
 		instance = this;

@@ -522,9 +522,19 @@ Prefab:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1995748058}
+    - target: {fileID: 114042147368578152, guid: c6ba0164328844e4da42d8ca44c2971b,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 541782672}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6ba0164328844e4da42d8ca44c2971b, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &541782672 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95907627538291868, guid: c6ba0164328844e4da42d8ca44c2971b,
+    type: 2}
+  m_PrefabInternal: {fileID: 459775645}
 --- !u!224 &645531217 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224521980695055422, guid: b3a109176787d6040b8aac164027cd28,
@@ -824,6 +834,10 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941515235144254, guid: b3a109176787d6040b8aac164027cd28, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3a109176787d6040b8aac164027cd28, type: 2}
