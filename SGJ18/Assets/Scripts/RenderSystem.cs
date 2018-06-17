@@ -47,7 +47,7 @@ public class RenderSystem : MonoBehaviour {
 
 		//Render Lights
 		foreach (Light2D l in Light2D.lights) {
-			l.Render(mat);         
+            if(l.enabled) l.Render(mat);         
 		}
 
         //Blur

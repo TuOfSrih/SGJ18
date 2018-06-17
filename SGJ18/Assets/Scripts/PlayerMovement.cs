@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour {
 	public float distance;
 	public float realDistance;
 	public float radius;
-	
-	
+
+    private RayLight2D flashlight;
 	
 
 	public static PlayerMovement instance;
@@ -72,6 +72,8 @@ public class PlayerMovement : MonoBehaviour {
 		joycons = JoyconManager.Instance.j;
 		j = joycons [jc_ind];
 		StartCoroutine("HeartBeat");
+
+        flashlight = GetComponent<RayLight2D>();
 	}
 	
 	void Update () {
@@ -152,12 +154,14 @@ public class PlayerMovement : MonoBehaviour {
 					isHidden = false; 
 					transform.position = closet.transform.position + Vector3.down * 0.5f;
 					rigidbody.simulated = true;
+                    flashlight.enabled = true;
 				}
 				else
 				{
 					isHidden = true;
 					transform.position = closet.transform.position + Vector3.forward;
 					rigidbody.simulated = false;
+                    flashlight.enabled = false;
 				}
 				
 			}

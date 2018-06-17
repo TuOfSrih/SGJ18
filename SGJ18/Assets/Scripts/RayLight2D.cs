@@ -12,6 +12,7 @@ public class RayLight2D : Light2D {
 
 	public override void Render(Material mat) {
         mat.SetFloat("_MinDistance", minDistance);
+        mat.SetFloat("_Angle", coneAngle);
 		base.Render(mat);
 		//Debug.Log("Rendering");
 		Graphics.DrawMeshNow(assembleMesh(), Vector3.zero, Quaternion.identity);
@@ -21,6 +22,7 @@ public class RayLight2D : Light2D {
 		Vector2 forward = facing;
 		float angle = Mathf.Atan2(forward.y, forward.x);
 		Vector3[] vertices = new Vector3[coneAngle * raysPerDeg * 2 + 2];
+        //Vector2[] uv = new Vector2[coneAngle * raysPerDeg * 2 + 2];
 		for (int i = 0; i <= coneAngle * 2 * raysPerDeg; i++) {
 			float ang = angle + ((float)i / raysPerDeg - coneAngle) * Mathf.Deg2Rad;
 			Vector3 cast = new Vector2(Mathf.Cos(ang), Mathf.Sin(ang));
@@ -43,6 +45,7 @@ public class RayLight2D : Light2D {
 		}
 		Mesh mesh = new Mesh();
 		mesh.vertices = vertices;
+        //mesh.u
 		mesh.triangles = triangles;
 		mesh.RecalculateBounds();
 		return mesh;

@@ -8,6 +8,7 @@ Shader "Lighting"
 		_LightingPos("LightingPos", Vector) = (0,0,0,0)
 		_MaxLength("MaxLength", Float) = 0
 		_MinDistance("MinDistance", Float) = 0
+		//_Angle("Angle", Float) = 0
 		_Color("Color", Color) = (1,1,1,1)
 	}
 	SubShader
