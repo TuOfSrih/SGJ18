@@ -17,6 +17,7 @@
           <e p="DialogueManager.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />
           <e p="EnemyBehaviour.cs" t="Include" />
+          <e p="FadeIn.cs" t="Include" />
           <e p="Light2D.cs" t="Include" />
           <e p="Lightning.cs" t="Include" />
           <e p="Maggot.cs" t="Include" />

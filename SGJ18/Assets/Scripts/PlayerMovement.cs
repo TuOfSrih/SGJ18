@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour {
 	public float radius;
 
 	public Animator animator;
+	public Animator fadeInAnim;
+	private bool test;
 	
 	
 	public static PlayerMovement instance;
@@ -63,6 +65,8 @@ public class PlayerMovement : MonoBehaviour {
 		nearCloset = false;
 		nearDiary = false;
 		isHidden = false;
+		isReading = true;
+		test = true;
 		realDistance = (boss.transform.position - transform.position).magnitude;
 		distance = 0;
 		rad = 0.0f;
@@ -71,12 +75,23 @@ public class PlayerMovement : MonoBehaviour {
 		// get the public Joycon array attached to the JoyconManager in scene
 		joycons = JoyconManager.Instance.j;
 		j = joycons [jc_ind];
-		StartCoroutine("HeartBeat");
 
         flashlight = GetComponent<RayLight2D>();
+		StartCoroutine("HeartBeat");
 	}
 	
 	void Update () {
+		if (test && (j.GetButtonDown(Joycon.Button.DPAD_DOWN)
+		             || j.GetButtonDown(Joycon.Button.DPAD_UP)
+		             || j.GetButtonDown(Joycon.Button.DPAD_RIGHT)
+		             || j.GetButtonDown(Joycon.Button.DPAD_LEFT)))
+		{
+			Debug.Log("hö");
+			fadeInAnim.SetBool("isTriggered", true);
+			isReading = false;
+			test = false;
+		}
+		
 		realDistance = (boss.transform.position - transform.position).magnitude;
 		if (realDistance > radius)
 		{
@@ -112,7 +127,7 @@ public class PlayerMovement : MonoBehaviour {
 
 			if (j.isLeft)
 			{
-				Vector2 targetDir = new Vector2(j.GetStick()[0], -j.GetStick()[1]);
+				Vector2 targetDir = new Vector2(-j.GetStick()[1], j.GetStick()[0]);
 				Vector2 target = targetDir * movementSpeed;
 				rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, target, acceleration * Time.deltaTime);
 				//facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) -
