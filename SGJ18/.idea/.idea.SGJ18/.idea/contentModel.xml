@@ -27,6 +27,7 @@
             <e p="Pathfinding.cs" t="Include" />
             <e p="WorldNode.cs" t="Include" />
           </e>
+          <e p="PlayAudio.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="RayLight2D.cs" t="Include" />
           <e p="RenderSystem.cs" t="Include" />
