@@ -440,11 +440,14 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hello my name is Dudner. Please save my brother!!! He is dead.
+  m_Text: "\t\t\t\tJun. 08.200X\r\n\nIcky, wriggly, hairy, ugly spiders!\r\nI hate
+    them so much. \r\nThe only way to treat them is a mighty stomp.\r\nBut then you
+    have to touch them.\r\nThey are so gross!\r\nIcky, wriggly, hairy, ugly spiders!\r\nI
+    hate them so much...\r\n"
 --- !u!114 &114616411753237760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -707,7 +710,7 @@ SpriteRenderer:
   m_Size: {x: 2.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!222 &222096966723108524
 CanvasRenderer:
@@ -834,7 +837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1000}
   m_SizeDelta: {x: 541.1, y: 393.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224270639250417262
