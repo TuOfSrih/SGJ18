@@ -179,10 +179,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a7af60e0b6a8449a3c0614c155b51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replacement: {fileID: 4800000, guid: fd18a0090c2d10345852f6bfa55591a1, type: 3}
   normalTexture: {fileID: 8400000, guid: e0d7069e966a11142977f9e4af26dc5c, type: 2}
   normalCam: {fileID: 20678623194017278}
   combine: {fileID: 4800000, guid: 5e98fe5fd2a4456459422599ab7f80db, type: 3}
+  ambientMat: {fileID: 2100000, guid: fe87f651e066939459975b9e66b74cb6, type: 2}
+  Transitionmaterial: {fileID: 2100000, guid: 93f3a3fe0b3635344b051d5b289a0c58, type: 2}
+  BlurMaterial: {fileID: 2100000, guid: ef3bd3d5513e73e4bb9e4f26282eb0cf, type: 2}
+  Magnitude: 0
+  ambient: 0.95
+  fadeTime: 0
 --- !u!124 &124117959083831208
 Behaviour:
   m_ObjectHideFlags: 1

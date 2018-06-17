@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 0d039142dce4e114c8257686cc15fb93
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +11,11 @@ TextureImporter:
     21300010: Ausgang_5
     21300012: Ausgang_6
     21300014: Ausgang_7
+=======
+guid: a2faaf6c71c50d74ebdad9ce1a813075
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> Stashed changes
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -37,11 +43,15 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     filterMode: -1
 =======
     filterMode: 0
 >>>>>>> 11f37227bef5c024a6084461e7609e18620d7918
+=======
+    filterMode: -1
+>>>>>>> Stashed changes
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -50,20 +60,28 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   spriteMode: 1
 =======
   spriteMode: 2
 >>>>>>> 11f37227bef5c024a6084461e7609e18620d7918
+=======
+  spriteMode: 1
+>>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   spritePixelsToUnits: 100
 =======
   spritePixelsToUnits: 64
 >>>>>>> 11f37227bef5c024a6084461e7609e18620d7918
+=======
+  spritePixelsToUnits: 100
+>>>>>>> Stashed changes
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,13 +105,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: b591e7588ee50e440bee0a8e84b09bf2
 =======
   - serializedVersion: 2
@@ -275,6 +297,9 @@ TextureImporter:
     bones: []
     spriteID: 9e621b068d9d2304393f066c6755edad
 >>>>>>> 11f37227bef5c024a6084461e7609e18620d7918
+=======
+    spriteID: f4e6140c8596b424f81452b4598a7cfd
+>>>>>>> Stashed changes
     vertices: []
     indices: 
     edges: []
