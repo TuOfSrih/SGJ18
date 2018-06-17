@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RenderSystem : MonoBehaviour {
 
+	public Shader fxBloom;
+	public Shader lighting;
     public Shader replacement;
     public RenderTexture normalTexture;
     public Camera normalCam;
@@ -29,22 +31,25 @@ public class RenderSystem : MonoBehaviour {
 	void Start() {
 		lightTexture = new RenderTexture(Screen.width, Screen.height, 0);
 		//normalTexture = new RenderTexture(Screen.width, Screen.height, 0);
-		clearMat = new Material(Shader.Find("Unlit/Color"));
+
+		clearMat = new Material(replacement);
 		clearMat.SetColor("_Color", Color.black);
 
         startFadeIn();
     }
 
 	private void OnRenderImage(RenderTexture source, RenderTexture destination) {
-        RenderTexture albedo = source;
+		
+
+		RenderTexture albedo = source;
 
 
 		Graphics.SetRenderTarget(lightTexture);
 		//Clear Current texture
-		Graphics.Blit(lightTexture, lightTexture, clearMat, 0);
+		Graphics.Blit(source, lightTexture, clearMat);
 
 		//Set material to light render material
-		Material mat = new Material(Shader.Find("Lighting")); //TODO
+		Material mat = new Material(lighting); //TODO
 		mat.SetPass(0);
         mat.SetTexture("_MainTex", source);
 
@@ -53,10 +58,12 @@ public class RenderSystem : MonoBehaviour {
             if(l != null && l.enabled) l.Render(mat);         
 		}
 
+
+		
 		RenderTexture tempTex = RenderTexture.GetTemporary(albedo.width, albedo.height);
 		
 		//Blur
-		Material blurMat = new Material(Shader.Find("Hidden/FXBloom"));
+		Material blurMat = new Material(fxBloom);
 		blurMat.SetFloat("_blurSize", blurSize);
 		blurMat.SetFloat("_intensity", blurIntensity);
 
@@ -89,9 +96,10 @@ public class RenderSystem : MonoBehaviour {
 
 		Transitionmaterial.SetFloat("_Magnitude", Magnitude);
 		//Transitionmaterial.SetTexture("_MainTex", albedo);
-		Graphics.Blit(tempTex, destination, Transitionmaterial);
+		Graphics.Blit(tempTex, source, Transitionmaterial);
 		RenderTexture.ReleaseTemporary(fY);
 		RenderTexture.ReleaseTemporary(tempTex);
+		Graphics.Blit(source, destination);
 		//RenderTexture.ReleaseTemporary(next);
 		//RenderTexture.ReleaseTemporary(next2);
 

@@ -506,7 +506,17 @@ Prefab:
         type: 2}
       propertyPath: replacement
       value: 
-      objectReference: {fileID: 4800000, guid: 5604c54c16f2b6d43b3e01551773f946, type: 3}
+      objectReference: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: fxBloom
+      value: 
+      objectReference: {fileID: 4800000, guid: ff156616244f31949bdb0f99c822c8b0, type: 3}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: lighting
+      value: 
+      objectReference: {fileID: 4800000, guid: b3a0c6edfd8fbc5429a2ff92fbed5da9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
   m_IsPrefabParent: 0
@@ -870,6 +880,10 @@ Prefab:
         type: 2}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200758004804350, guid: 64b98667e27c85c419784bbd07375e3a, type: 2}
+      propertyPath: m_TagString
+      value: trigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b98667e27c85c419784bbd07375e3a, type: 2}
@@ -7405,6 +7419,7 @@ GameObject:
   - component: {fileID: 1765240987}
   - component: {fileID: 1765240993}
   - component: {fileID: 1765240992}
+  - component: {fileID: 1765240994}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -7496,7 +7511,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1981524589
-  m_SortingLayer: -2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 629cb3420706dd04ab1cc25366caa8eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7637,6 +7652,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &1765240994
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1765240986}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1001 &1885058634
 Prefab:
   m_ObjectHideFlags: 0

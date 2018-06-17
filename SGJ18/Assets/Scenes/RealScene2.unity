@@ -420,6 +420,21 @@ Prefab:
       propertyPath: ambientMat
       value: 
       objectReference: {fileID: 2100000, guid: fe87f651e066939459975b9e66b74cb6, type: 2}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: fxBloom
+      value: 
+      objectReference: {fileID: 4800000, guid: ff156616244f31949bdb0f99c822c8b0, type: 3}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: lighting
+      value: 
+      objectReference: {fileID: 4800000, guid: b3a0c6edfd8fbc5429a2ff92fbed5da9, type: 3}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: replacement
+      value: 
+      objectReference: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
   m_IsPrefabParent: 0
@@ -516,6 +531,31 @@ GameObject:
   m_PrefabParentObject: {fileID: 1398367920581418, guid: cf3c7a8f3b764e348997d4add6d75215,
     type: 2}
   m_PrefabInternal: {fileID: 34137984}
+--- !u!61 &427357512
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 427357511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8, y: 8}
+    newSize: {x: 8, y: 8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!114 &427357514
 MonoBehaviour:
   m_ObjectHideFlags: 0

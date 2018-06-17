@@ -508,6 +508,21 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: fxBloom
+      value: 
+      objectReference: {fileID: 4800000, guid: ff156616244f31949bdb0f99c822c8b0, type: 3}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: lighting
+      value: 
+      objectReference: {fileID: 4800000, guid: b3a0c6edfd8fbc5429a2ff92fbed5da9, type: 3}
+    - target: {fileID: 114620409236556136, guid: 5ff3d0532cac7b445a83a07d594c2504,
+        type: 2}
+      propertyPath: replacement
+      value: 
+      objectReference: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
   m_IsPrefabParent: 0
@@ -766,7 +781,7 @@ Prefab:
         type: 2}
       propertyPath: fadeInAnim
       value: 
-      objectReference: {fileID: 1028867943}
+      objectReference: {fileID: 0}
     - target: {fileID: 114042147368578152, guid: c6ba0164328844e4da42d8ca44c2971b,
         type: 2}
       propertyPath: diary
@@ -780,11 +795,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6ba0164328844e4da42d8ca44c2971b, type: 2}
   m_IsPrefabParent: 0
---- !u!95 &1028867943 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95687932154791478, guid: b3a109176787d6040b8aac164027cd28,
-    type: 2}
-  m_PrefabInternal: {fileID: 40192836}
 --- !u!1001 &1108147996
 Prefab:
   m_ObjectHideFlags: 0
@@ -3074,7 +3084,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1191935022}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baab515b4f9887d4080608c46b654eb9, type: 3}
   m_Name: 
@@ -3087,7 +3097,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1191935022}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dc51df36a25e3f4b9da389b72a1e50a, type: 3}
   m_Name: 
@@ -3095,8 +3105,8 @@ MonoBehaviour:
   map: {fileID: 2030751543}
   currentTile: {fileID: 0}
   player: {fileID: 276831488}
-  speed: 50
-  animator: {fileID: 0}
+  speed: 4
+  animator: {fileID: 1233466657}
 --- !u!61 &1191935025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8650,7 +8660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2030751543
 MonoBehaviour:
   m_ObjectHideFlags: 0

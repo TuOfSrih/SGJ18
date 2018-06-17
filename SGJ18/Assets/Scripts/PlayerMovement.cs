@@ -202,6 +202,17 @@ public class PlayerMovement : MonoBehaviour {
 				}
 			}
 		}
+
+		if (trigger)
+		{
+			if (j.GetButtonDown(Joycon.Button.DPAD_DOWN)
+			    || j.GetButtonDown(Joycon.Button.DPAD_UP)
+			    || j.GetButtonDown(Joycon.Button.DPAD_RIGHT)
+			    || j.GetButtonDown(Joycon.Button.DPAD_LEFT))
+			{
+				StartCoroutine("waitASec");
+			}
+		}
 		
 		if (nearDiary)
 		{
@@ -227,6 +238,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	private bool trigger;
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (coll.CompareTag("diary"))
@@ -236,6 +248,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 		if (coll.CompareTag("boss"))
 		{
+			rigidbody.velocity = Vector2.zero;
 			if (diaryIsRead)
 			{
 				//TODO: übergang und animation
@@ -248,8 +261,16 @@ public class PlayerMovement : MonoBehaviour {
 				isReading = true;
 				//TODO: animation
 				StopAllCoroutines();
-				StartCoroutine("waitASec");
+				StartCoroutine("waitASec2");
 			}
+		}
+
+		if (coll.CompareTag("trigger"))
+		{
+			rigidbody.velocity = Vector2.zero;
+			coll.GetComponent<DialogueTrigger>().TriggerDialogue();
+			isReading = true;
+			trigger = true;
 		}
 		
 		if (!coll.CompareTag("closet")) return;
@@ -262,7 +283,15 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds(1);
 		
 		j.SetRumble(0, 0, 0, 0);
-		SceneManager.LoadScene(1, LoadSceneMode.Single);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+	}
+	
+	IEnumerator waitASec2()
+	{
+		yield return new WaitForSeconds(1);
+		
+		j.SetRumble(0, 0, 0, 0);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 	}
 	
 	void OnTriggerExit2D(Collider2D coll)

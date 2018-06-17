@@ -38,6 +38,7 @@
           <e p="PlayerMovement.cs" t="Include" />
           <e p="RayLight2D.cs" t="Include" />
           <e p="RenderSystem.cs" t="Include" />
+          <e p="Schloss.cs" t="Include" />
           <e p="Spider.cs" t="Include" />
           <e p="TilemapCopy.cs" t="Include" />
         </e>
