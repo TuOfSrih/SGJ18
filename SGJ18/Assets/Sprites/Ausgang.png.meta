@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 guid: 0d039142dce4e114c8257686cc15fb93
 TextureImporter:
@@ -16,6 +17,11 @@ guid: a2faaf6c71c50d74ebdad9ce1a813075
 TextureImporter:
   fileIDToRecycleName: {}
 >>>>>>> Stashed changes
+=======
+guid: a20a9505ce9c9a24e8908dd4d3040a0b
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> 2
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -43,6 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
     filterMode: -1
@@ -52,6 +59,9 @@ TextureImporter:
 =======
     filterMode: -1
 >>>>>>> Stashed changes
+=======
+    filterMode: -1
+>>>>>>> 2
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -60,6 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
   spriteMode: 1
@@ -69,10 +80,14 @@ TextureImporter:
 =======
   spriteMode: 1
 >>>>>>> Stashed changes
+=======
+  spriteMode: 1
+>>>>>>> 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
   spritePixelsToUnits: 100
@@ -82,6 +97,9 @@ TextureImporter:
 =======
   spritePixelsToUnits: 100
 >>>>>>> Stashed changes
+=======
+  spritePixelsToUnits: 100
+>>>>>>> 2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,16 +123,20 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> 2
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     spriteID: b591e7588ee50e440bee0a8e84b09bf2
 =======
@@ -300,6 +322,9 @@ TextureImporter:
 =======
     spriteID: f4e6140c8596b424f81452b4598a7cfd
 >>>>>>> Stashed changes
+=======
+    spriteID: f901f10eee8bc1447b3d6fd8ed9bf323
+>>>>>>> 2
     vertices: []
     indices: 
     edges: []

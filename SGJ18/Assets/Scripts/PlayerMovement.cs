@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float realDistance;
 	public float radius;
 
-    private RayLight2D flashlight;
+	public Animator animator;
 	
 
 	public static PlayerMovement instance;
@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour {
 		realDistance = (boss.transform.position - transform.position).magnitude;
 		distance = 0;
 		rad = 0.0f;
-		
 		gyro = new Vector3(0, 0, 0);
 		accel = new Vector3(0, 0, 0);
 		// get the public Joycon array attached to the JoyconManager in scene
@@ -97,34 +96,44 @@ public class PlayerMovement : MonoBehaviour {
 			j.Recenter();
 		}
 
-		if (j.GetButton(Joycon.Button.SL))
-		{
-			rad -= Time.deltaTime * 200;
-		}
 
-		if (j.GetButton(Joycon.Button.SR))
-		{
-			rad += Time.deltaTime * 200;
-		}
+
 		if (!isReading)
 		{
+			if (j.GetStick()[0] != 0 || j.GetStick()[1] != 0)
+			{
+				animator.SetBool("isMoving", true);
+			}
+			else
+			{
+				animator.SetBool("isMoving", false);
+			}
+
 			if (j.isLeft)
 			{
-				Vector2 target = new Vector2(j.GetStick()[0], -j.GetStick()[1]) * movementSpeed;
+				Vector2 targetDir = new Vector2(j.GetStick()[0], -j.GetStick()[1]);
+				Vector2 target = targetDir * movementSpeed;
 				rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, target, acceleration * Time.deltaTime);
 				//facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) -
 				//(Vector2) transform.position;
 				accel = j.GetAccel();
 				facingLerp = facing;
 				facing = Vector2.Lerp(facingLerp, new Vector2(accel.x, -accel.y), 0.1f);
-
+			
 				//facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3 + (Vector2) transform.position;
 				//Debug.DrawLine(facing, transform.position, Color.green);
+
+				
+				targetDir = targetDir.normalized;
+				animator.SetFloat("x", targetDir.x);
+				animator.SetFloat("y", targetDir.y);
+				
 			}
 			else
 			{
 				accel = j.GetAccel();
-				Vector2 target = new Vector2(j.GetStick()[1], -j.GetStick()[0]) * movementSpeed;
+				Vector2 targetDir = new Vector2(j.GetStick()[1], -j.GetStick()[0]);
+				Vector2 target = targetDir * movementSpeed;
 				rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, target, acceleration * Time.deltaTime);
 				//facing = (Vector2) UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition) -
 				//(Vector2) transform.position;
@@ -132,6 +141,10 @@ public class PlayerMovement : MonoBehaviour {
 				facing = Vector2.Lerp(facingLerp, new Vector2(-accel.x, accel.y), 0.1f);
 				//facing = new Vector2(Mathf.Sin(rad / 180 * Mathf.PI), Mathf.Cos(rad / 180 * Mathf.PI)) * 3;
 				//Debug.DrawLine(facing, transform.position, Color.green);
+				targetDir = targetDir.normalized;
+				animator.SetFloat("x", targetDir.x);
+				animator.SetFloat("y", targetDir.y);
+				
 			}
 		}
 
@@ -185,6 +198,7 @@ public class PlayerMovement : MonoBehaviour {
 					diary.TriggerDialogue();
 					diaryIsRead = true;
 					isReading = true;
+					animator.SetBool("isMoving", false);
 				}
 			}
 		}

@@ -18,6 +18,8 @@
           <e p="DialogueTrigger.cs" t="Include" />
           <e p="EnemyBehaviour.cs" t="Include" />
           <e p="Light2D.cs" t="Include" />
+          <e p="Lightning.cs" t="Include" />
+          <e p="Maggot.cs" t="Include" />
           <e p="NormalTile.cs" t="Include" />
           <e p="Pathfinding" t="Include">
             <e p="BinaryHeap.cs" t="Include" />
@@ -34,9 +36,9 @@
         <e p="Shaders" t="Include">
           <e p="Albedo.shader" t="Include" />
           <e p="Ambient.shader" t="Include" />
+          <e p="Blur.shader" t="Include" />
           <e p="Combine.shader" t="Include" />
           <e p="Lighting.shader" t="Include" />
-          <e p="Normal.shader" t="Include" />
           <e p="ScreenTransition.shader" t="Include" />
         </e>
       </e>
