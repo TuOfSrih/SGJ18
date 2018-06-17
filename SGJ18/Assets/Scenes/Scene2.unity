@@ -359,7 +359,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4772369008506596, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4772369008506596, guid: 5ff3d0532cac7b445a83a07d594c2504, type: 2}
       propertyPath: m_LocalPosition.y
@@ -706,7 +706,7 @@ Transform:
   m_Children:
   - {fileID: 1679059084}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &962718292 stripped
 MonoBehaviour:
@@ -757,7 +757,7 @@ Prefab:
         type: 2}
       propertyPath: playerMovement
       value: 
-      objectReference: {fileID: 411953867}
+      objectReference: {fileID: 0}
     - target: {fileID: 114551860513721798, guid: cf3c7a8f3b764e348997d4add6d75215,
         type: 2}
       propertyPath: map
@@ -822,7 +822,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472964609
 GameObject:
@@ -2500,11 +2500,6 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
---- !u!1 &1765240986 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1398367920581418, guid: cf3c7a8f3b764e348997d4add6d75215,
-    type: 2}
-  m_PrefabInternal: {fileID: 987553048}
 --- !u!1001 &1954053992
 Prefab:
   m_ObjectHideFlags: 0
