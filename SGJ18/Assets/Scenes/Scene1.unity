@@ -3195,66 +3195,13 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 834417368}
-    - target: {fileID: 212554793234364476, guid: 64b98667e27c85c419784bbd07375e3a,
+    - target: {fileID: 114107861465077744, guid: 64b98667e27c85c419784bbd07375e3a,
         type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 93aa9be86701f544a9832a73f881240a,
-        type: 3}
-    - target: {fileID: 212554793234364476, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212554793234364476, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212554793234364476, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_AutoTiling
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61127676080769848, guid: 64b98667e27c85c419784bbd07375e3a,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "\t\t\t\tJun. 08.200X\r\n\nIcky, wriggly, hairy, ugly spiders!\r\nI hate
+        them so much. \r\nThe only way to treat them is a mighty stomp.\r\nBut then
+        you have to touch them.\r\nThey are so gross!\r\nIcky, wriggly, hairy, ugly
+        spiders!\r\nI hate them so much...\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b98667e27c85c419784bbd07375e3a, type: 2}
