@@ -17,6 +17,8 @@ public class RenderSystem : MonoBehaviour {
     public float ambient;
     public float fadeTime;
 
+	public float blurSize = 10;
+	private float blurIntensity = 1;
 
 	RenderTexture lightTexture;
 
@@ -51,42 +53,47 @@ public class RenderSystem : MonoBehaviour {
             if(l != null && l.enabled) l.Render(mat);         
 		}
 
-        //Blur
-        /*RenderTexture next = RenderTexture.GetTemporary(albedo.width, albedo.height);
-        BlurMaterial.SetFloatArray("_Kernel", kernel);
-        BlurMaterial.SetFloat("_XDir", 0);
-        Graphics.Blit(lightTexture, next, BlurMaterial);
-        RenderTexture next2 = RenderTexture.GetTemporary(albedo.width, albedo.height);
-        BlurMaterial.SetFloatArray("_Kernel", kernel);
-        BlurMaterial.SetFloat("_XDir", 1);
-        Graphics.Blit(next, next2, BlurMaterial);*/
+		RenderTexture tempTex = RenderTexture.GetTemporary(albedo.width, albedo.height);
+		
+		//Blur
+		Material blurMat = new Material(Shader.Find("Hidden/FXBloom"));
+		blurMat.SetFloat("_blurSize", blurSize);
+		blurMat.SetFloat("_intensity", blurIntensity);
 
-        Material combineMat = new Material(combine);
-        combineMat.SetTexture("_MainTex", albedo);
-        combineMat.SetTexture("_LightingTex", lightTexture);
-        combineMat.SetTexture("_Normals", normalTexture);
-        //combineMat.SetFloat("_Ambient", ambient);
+		blurMat.SetFloat("_XDir", 0);
+		Graphics.Blit(lightTexture, tempTex, blurMat);
+
+		blurMat.SetFloat("_XDir", 1);
+		Graphics.Blit(tempTex, lightTexture, blurMat);
 
 
-        //Combine Lights
-        RenderTexture fY = RenderTexture.GetTemporary(albedo.width, albedo.height);
-        Graphics.Blit(source, fY, combineMat);
 
-        
 
-        //Add ambient
-        RenderTexture ambientTex = RenderTexture.GetTemporary(albedo.width, albedo.height);
-        ambientMat.SetTexture("_Albedo", albedo);
-        ambientMat.SetFloat("_Ambient", ambient);
-        Graphics.Blit(fY, ambientTex, ambientMat);
+		Material combineMat = new Material(combine);
+		combineMat.SetTexture("_MainTex", albedo);
+		combineMat.SetTexture("_LightingTex", lightTexture);
+		combineMat.SetTexture("_Normals", normalTexture);
+		//combineMat.SetFloat("_Ambient", ambient);
 
-        Transitionmaterial.SetFloat("_Magnitude", Magnitude);
-        //Transitionmaterial.SetTexture("_MainTex", albedo);
-        Graphics.Blit(ambientTex, destination, Transitionmaterial);
-        RenderTexture.ReleaseTemporary(fY);
-        RenderTexture.ReleaseTemporary(ambientTex);
-        //RenderTexture.ReleaseTemporary(next);
-        //RenderTexture.ReleaseTemporary(next2);
+
+		//Combine Lights
+		RenderTexture fY = RenderTexture.GetTemporary(albedo.width, albedo.height);
+		Graphics.Blit(source, fY, combineMat);
+
+
+
+		//Add ambient
+		ambientMat.SetTexture("_Albedo", albedo);
+		ambientMat.SetFloat("_Ambient", ambient);
+		Graphics.Blit(fY, tempTex, ambientMat);
+
+		Transitionmaterial.SetFloat("_Magnitude", Magnitude);
+		//Transitionmaterial.SetTexture("_MainTex", albedo);
+		Graphics.Blit(tempTex, destination, Transitionmaterial);
+		RenderTexture.ReleaseTemporary(fY);
+		RenderTexture.ReleaseTemporary(tempTex);
+		//RenderTexture.ReleaseTemporary(next);
+		//RenderTexture.ReleaseTemporary(next2);
 
 		//DEBUGGING STUFF REMOVE THIS!!!
 		if (Input.GetKey(KeyCode.Y)) {

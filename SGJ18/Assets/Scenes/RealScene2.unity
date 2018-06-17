@@ -152,7 +152,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114415731817049110, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
+    - {fileID: 114551860513721798, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cf3c7a8f3b764e348997d4add6d75215, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &152845726
@@ -496,7 +498,7 @@ MonoBehaviour:
   currentTile: {fileID: 0}
   player: {fileID: 1740233627}
   speed: 5
-  animator: {fileID: 0}
+  animator: {fileID: 1506203106}
 --- !u!1001 &449713467
 Prefab:
   m_ObjectHideFlags: 0
@@ -602,7 +604,7 @@ Prefab:
         type: 2}
       propertyPath: fadeInAnim
       value: 
-      objectReference: {fileID: 1948626917}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6ba0164328844e4da42d8ca44c2971b, type: 2}
   m_IsPrefabParent: 0
@@ -1180,6 +1182,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1506203106 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95689649998640634, guid: cf3c7a8f3b764e348997d4add6d75215,
+    type: 2}
+  m_PrefabInternal: {fileID: 34137984}
 --- !u!1 &1572710147
 GameObject:
   m_ObjectHideFlags: 0
@@ -8530,11 +8537,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 459775645}
   m_Script: {fileID: 11500000, guid: 5ee9aca3bd870dc44a4e0e7c9cf2b6da, type: 3}
---- !u!95 &1948626917 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95687932154791478, guid: b3a109176787d6040b8aac164027cd28,
-    type: 2}
-  m_PrefabInternal: {fileID: 1112326904}
 --- !u!114 &1995748058 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114365002729060942, guid: 64b98667e27c85c419784bbd07375e3a,
