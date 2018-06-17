@@ -6,6 +6,8 @@ TagManager:
   tags:
   - closet
   - diary
+  - asdf
+  - boss
   layers:
   - Default
   - TransparentFX
@@ -40,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Player
+    uniqueID: 2313442707
+    locked: 0
   - name: Debug
     uniqueID: 445484901
     locked: 0

@@ -23,8 +23,9 @@ public class PlayerMovement : MonoBehaviour {
 	public Animator animator;
 	public Animator fadeInAnim;
 	private bool test;
-	
-	
+
+	public AudioClip[] audio;
+	private AudioSource[] source;
 	public static PlayerMovement instance;
 
 	public float movementSpeed;
@@ -57,6 +58,8 @@ public class PlayerMovement : MonoBehaviour {
 	private Joycon j;
 	private RayLight2D flashlight;
 
+	private MusicManager music;
+
 	void Start () {
 		instance = this;
 		rigidbody = GetComponent<Rigidbody2D>();
@@ -66,6 +69,9 @@ public class PlayerMovement : MonoBehaviour {
 		nearDiary = false;
 		isHidden = false;
 		isReading = true;
+		music = GameObject.FindObjectOfType<MusicManager>();
+		wallbump = 0;
+		source = GetComponents<AudioSource>();
 		test = true;
 		realDistance = (boss.transform.position - transform.position).magnitude;
 		distance = 0;
@@ -96,10 +102,12 @@ public class PlayerMovement : MonoBehaviour {
 		if (realDistance > radius)
 		{
 			distance = 0;
+			music.source.volume = 0.05f;
 		}
 		else
 		{
 			distance = 1 - (realDistance / radius) * 0.5f;
+			music.source.volume = 0.015f;
 		}
 
 		if (diaryIsRead)
@@ -227,10 +235,34 @@ public class PlayerMovement : MonoBehaviour {
 			nearDiary = true;
 		}
 		
-		
+		Debug.Log("hö");
+		if (coll.CompareTag("boss"))
+		{
+			if (diaryIsRead)
+			{
+				//TODO: übergang und animation
+				music.level1 = true;
+				StopAllCoroutines();
+				StartCoroutine("waitASec");
+			}
+			else
+			{
+				isReading = true;
+				//TODO: animation
+				StopAllCoroutines();
+				StartCoroutine("waitASec");
+			}
+		}
 		if (!coll.CompareTag("closet")) return;
 		nearCloset = true;
 		closet = coll.gameObject;
+	}
+
+	IEnumerator waitASec()
+	{
+		yield return new WaitForSeconds(10);
+		j.SetRumble(0, 0, 0, 0);
+		Application.LoadLevel(0);
 	}
 	
 	void OnTriggerExit2D(Collider2D coll)
@@ -250,7 +282,10 @@ public class PlayerMovement : MonoBehaviour {
 	IEnumerator HeartBeat()
 	{
 		while (true)
-		{
+		{	
+			source[1].Play();
+			source[1].pitch = 1 + (distance * 0.5f);
+			yield return new WaitForSeconds(0.30f- (distance * 0.05f));
 			j.SetRumble(200, 250, 0.2f + (distance * 0.1f), 30 - (int)(distance * 20f));
 			yield return new WaitForSeconds(0.15f - (distance * 0.03f));
 			j.SetRumble(100, 150, 0.2f + (distance * 0.1f), 30 - (int)(distance * 20f));
@@ -258,12 +293,21 @@ public class PlayerMovement : MonoBehaviour {
 			j.SetRumble(200, 250, 0.05f + (distance * 0.3f), 50);
 			if (distance == 0)
 			{
-				yield return new WaitForSeconds(1.5f);
+				yield return new WaitForSeconds(1.0f);
 			}
 			else
 			{
 				yield return new WaitForSeconds(1f - (distance * 0.8f));
 			}
 		}
+	}
+
+	private int wallbump;
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		source[0].clip = audio[wallbump];
+		source[0].Play();
+		wallbump = (wallbump + 1) % 5;
 	}
 }
