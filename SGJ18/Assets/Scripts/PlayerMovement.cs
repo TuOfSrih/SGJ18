@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour {
 	public float radius;
 
 	public Animator animator;
-	public Animator fadeInAnim;
 	private bool test;
 
 	public AudioClip[] audio;
@@ -56,7 +55,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public RayLight2D rayLight;
 
-	private Joycon j;
+	public Joycon j;
 	private RayLight2D flashlight;
 
 	//private MusicManager music;
@@ -69,7 +68,7 @@ public class PlayerMovement : MonoBehaviour {
 		nearCloset = false;
 		nearDiary = false;
 		isHidden = false;
-		isReading = true;
+		isReading = false;
 		//music = GameObject.FindObjectOfType<MusicManager>();
 		wallbump = 0;
 		source = GetComponents<AudioSource>();
@@ -93,8 +92,6 @@ public class PlayerMovement : MonoBehaviour {
 		             || j.GetButtonDown(Joycon.Button.DPAD_RIGHT)
 		             || j.GetButtonDown(Joycon.Button.DPAD_LEFT)))
 		{
-			Debug.Log("hö");
-			fadeInAnim.SetBool("isTriggered", true);
 			isReading = false;
 			test = false;
 		}
@@ -236,7 +233,6 @@ public class PlayerMovement : MonoBehaviour {
 			nearDiary = true;
 		}
 		
-		Debug.Log("hö");
 		if (coll.CompareTag("boss"))
 		{
 			if (diaryIsRead)
@@ -262,9 +258,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	IEnumerator waitASec()
 	{
-		yield return new WaitForSeconds(10);
+		yield return new WaitForSeconds(1);
+		
 		j.SetRumble(0, 0, 0, 0);
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(0, LoadSceneMode.Single);
 	}
 	
 	void OnTriggerExit2D(Collider2D coll)
@@ -302,6 +299,7 @@ public class PlayerMovement : MonoBehaviour {
 				yield return new WaitForSeconds(1f - (distance * 0.8f));
 			}
 		}
+		yield return null;
 	}
 
 	private int wallbump;

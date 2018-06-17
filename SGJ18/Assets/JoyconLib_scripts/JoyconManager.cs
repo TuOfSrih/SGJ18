@@ -92,12 +92,12 @@ public class JoyconManager: MonoBehaviour
 			j[i].Update();
 		}
     }
-
-    void OnApplicationQuit()
-    {
+	
+	void OnDestroy()
+	{
 		for (int i = 0; i < j.Count; ++i)
 		{
 			j[i].Detach ();
 		}
-    }
+	}
 }

@@ -16,6 +16,7 @@
           <e p="CameraFollow.cs" t="Include" />
           <e p="CamReplaceShader.cs" t="Include" />
           <e p="Closet.cs" t="Include" />
+          <e p="Cry.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />
